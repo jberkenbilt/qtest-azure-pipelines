@@ -8,6 +8,7 @@ if %2 == msvc (
     )
 ) else (
     choco uninstall mingw
+    type "C:\ProgramData\chocolatey\logs\chocolatey.log"
     choco install msys2
     path "C:\tools\msys64\usr\bin;%PATH%"
 )
