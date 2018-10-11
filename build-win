@@ -1,5 +1,7 @@
 #!/bin/bash
 set -x
+wordsize=$1
+tool=$2
 
 cl
 g++ --version
@@ -10,14 +12,13 @@ cd qpdf-8.2.1
 unzip ../qpdf-external-libs-bin.zip
 cwd=`pwd`
 PATH=$cwd/libqpdf/build:$PATH
-for i in msvc mingw; do
-    rm -rf {install,qtest}-$i$wordsize
-    # XXX show failed output instead of thing below
-    ./config-$i
-    make -j8
-    make -k check || \
-        { mkdir qtest-$i$wordsize; \
-          tar cf - */build/qtest.log | (cd qtest-$i$wordsize; tar xf -) }
-    make install
-    make distclean
-done
+
+rm -rf {install,qtest}-$tool$wordsize
+# XXX show failed output instead of thing below
+./config-$tool
+make -j8
+make -k check || \
+    { mkdir qtest-$tool$wordsize; \
+      tar cf - */build/qtest.log | (cd qtest-$tool$wordsize; tar xf -) }
+make install
+make distclean

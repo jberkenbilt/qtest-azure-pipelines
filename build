@@ -12,5 +12,5 @@ done
 printenv
 set
 if [[ $OSTYPE == msys ]]; then
-    ./build-win
+    ./build-win $1 $2
 fi
