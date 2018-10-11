@@ -6,11 +6,6 @@ if %2 == msvc (
     ) else (
        call "%VS140COMNTOOLS%\..\..\VC\bin\vcvars32.bat"
     )
-) else (
-    choco uninstall mingw
-    type "C:\ProgramData\chocolatey\logs\chocolatey.log"
-    choco install msys2
-    path "C:\tools\msys64\usr\bin;%PATH%"
 )
 
 bash ./build %1 %2
