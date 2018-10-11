@@ -1,0 +1,10 @@
+#!/bin/bash
+set -x
+if [ -d generated ]; then
+    cat generated/potato
+fi
+ls -lR
+for i in $(echo $PATH | sed -e 's/:/ /g'); do
+    echo "path: $i"
+    ls $i
+done

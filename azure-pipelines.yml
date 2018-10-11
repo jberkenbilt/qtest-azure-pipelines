@@ -21,10 +21,7 @@ jobs:
     inputs:
       artifactName: generated
       downloadPath: $(System.DefaultWorkingDirectory)
-  - bash: |
-      set -x
-      cat generated/potato
-      ls -lR
+  - bash: ./build
     displayName: 'Windows build and test'
   dependsOn: Linux
   condition: succeeded()
