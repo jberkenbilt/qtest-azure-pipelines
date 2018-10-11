@@ -15,7 +15,7 @@ PATH=$cwd/libqpdf/build:$PATH
 
 rm -rf {install,qtest}-$tool$wordsize
 # XXX show failed output instead of thing below
-./config-$tool
+./config-$tool --with-windows-wordsize=$wordsize --enable-show-failed-test-output
 make -j8
 make -k check || \
     { mkdir qtest-$tool$wordsize; \
