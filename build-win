@@ -1,7 +1,10 @@
 #!/bin/bash
 set -x
 
-find "/c/Program Files*" -name 'vcvars*.bat' -print
+find "c:/Program Files*" -name 'vcvars*.bat' -print
+find "/c/Program*" -name 'vcvars*.bat' -print
+find "c:/Program*" -name 'vcvars*.bat' -print
+find "/c" -name 'vcvars*.bat' -print
 exit 0
 
 
