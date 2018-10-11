@@ -1,60 +1,13 @@
 jobs:
-##- job: Linux
-##  pool:
-##    vmImage: ubuntu-16.04
-##  steps:
-##  - bash: |
-##      set -x
-##      echo test > potato
-##    displayName: 'Linux build and test'
-##  - task: PublishBuildArtifacts@1
-##    inputs:
-##      pathtoPublish: '$(System.DefaultWorkingDirectory)/potato'
-##      artifactName: generated
-##    displayName: 'Upload Artifacts'
+- job: Linux
+  pool:
+    vmImage: ubuntu-16.04
+  steps:
+  - bash: cat -v file.c file.txt
+    displayName: 'Linux test'
 - job: Windows
   pool:
     vmImage: vs2017-win2016
-  strategy:
-    matrix:
-      msvc32:
-        wordsize: 32
-        tool: msvc
-      msvc64:
-        wordsize: 64
-        tool: msvc
-      mingw32:
-        wordsize: 32
-        tool: mingw
-      mingw64:
-        wordsize: 64
-        tool: mingw
-    maxParallel: 4
   steps:
-#  - task: DownloadBuildArtifacts@0
-#    displayName: 'Download Artifacts'
-#    inputs:
-#      artifactName: generated
-#      downloadPath: $(System.DefaultWorkingDirectory)
-  - script: azure-pipelines/build-win.bat $(wordsize) $(tool)
-    displayName: 'Windows build and test'
-  - task: PublishBuildArtifacts@1
-    inputs:
-      pathtoPublish: '$(System.DefaultWorkingDirectory)/installers'
-      artifactName: installers
-    displayName: 'Upload Artifacts'
-#  dependsOn: Linux
-#  condition: succeeded()
-- job: macOS
-  pool:
-    vmImage: macOS-10.13
-  steps:
-#  - task: DownloadBuildArtifacts@0
-#    displayName: 'Download Artifacts'
-#    inputs:
-#      artifactName: generated
-#      downloadPath: $(System.DefaultWorkingDirectory)
-  - script: azure-pipelines/build-mac
-    displayName: 'Mac build and test'
-#  dependsOn: Linux
-#  condition: succeeded()
+  - bash: cat -v file.c file.txt
+    displayName: 'Windows test'
