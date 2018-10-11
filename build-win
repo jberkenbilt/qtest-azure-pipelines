@@ -2,6 +2,8 @@
 set -x
 
 ls -lR "$VS140COMNTOOLS"
+cat "$VS140COMNTOOLS/vsvars32.bat"
+ls -lR "$VS140COMNTOOLS/../.."
 
 #find "/c" -name 'vcvars*.bat' -print
 exit 0
