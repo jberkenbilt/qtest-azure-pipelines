@@ -4,7 +4,8 @@ if [ -d generated ]; then
     cat generated/potato
 fi
 ls -lR
-for i in $(echo $PATH | sed -e 's/:/ /g'); do
+IFS=:
+for i in $PATH; do
     echo "path: $i"
-    ls $i
+    ls "$i"
 done
