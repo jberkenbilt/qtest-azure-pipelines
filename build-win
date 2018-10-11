@@ -3,6 +3,12 @@ set -ex
 wordsize=$1
 tool=$2
 
+ls C:/tools
+ls -lR C:/tools/mingw*
+
+exit 0
+
+
 cl
 g++ --version
 curl -L https://downloads.sourceforge.net/project/qpdf/external-libs/2017-08-21/qpdf-external-libs-bin.zip -o qpdf-external-libs-bin.zip
