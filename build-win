@@ -5,10 +5,10 @@ wordsize=$1
 tool=$2
 
 if [[ $wordsize == 64 ]]; then
-    pacman -S mingw-w64-x86_64-toolchain
+    pacman -Sy --noconfirm mingw-w64-x86_64-toolchain
     PATH="/c/tools/msys64/mingw64/bin:$PATH"
 else
-    pacman -S mingw-w64-i686-toolchain
+    pacman -Sy --noconfirm mingw-w64-i686-toolchain
     PATH="/c/tools/msys64/mingw32/bin:$PATH"
 fi
 
@@ -25,13 +25,9 @@ unzip ../qpdf-external-libs-bin.zip
 cwd=`pwd`
 PATH=$cwd/libqpdf/build:$PATH
 
-rm -rf {install,qtest}-$tool$wordsize
-# XXX show failed output instead of thing below
-
+rm -rf install-$tool$wordsize
 ./config-$tool --with-windows-wordsize=$wordsize --enable-show-failed-test-output
 make -j8
-make -k check || \
-    { mkdir qtest-$tool$wordsize; \
-      tar cf - */build/qtest.log | (cd qtest-$tool$wordsize; tar xf -) }
+make -k check
 make install
 make distclean
