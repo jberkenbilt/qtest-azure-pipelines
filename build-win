@@ -4,13 +4,14 @@ wordsize=$1
 tool=$2
 
 choco install msys2
-pacman -Syuu
-pacman -S mingw-w64-x86_64-toolchain mingw-w64-i686-toolchain
-
-
-
-exit 0
-
+PATH=/c/msys64/bin:$PATH
+if [ $wordsize == 64 ]; then
+    pacman -S mingw-w64-x86_64-toolchain
+    PATH=/c/msys64/mingw64/bin:$PATH
+else
+    pacman -S mingw-w64-i686-toolchain
+    PATH=/c/msys32/mingw64/bin:$PATH
+fi
 
 cl
 g++ --version
