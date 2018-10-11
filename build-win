@@ -3,8 +3,6 @@ set -ex
 wordsize=$1
 tool=$2
 
-choco install msys2
-PATH="/c/tools/msys64/usr/bin:$PATH"
 if [ $wordsize == 64 ]; then
     pacman -S mingw-w64-x86_64-toolchain
     PATH="/c/tools/msys64/mingw64/bin:$PATH"
