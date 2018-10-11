@@ -21,8 +21,12 @@ jobs:
 #    inputs:
 #      artifactName: generated
 #      downloadPath: $(System.DefaultWorkingDirectory)
-  - bash: ./build
+  - script: |
+      call %VS140COMNTOOLS%\..\..\VC\bin\amd64\vcvars64.bat
+      bash ./build
     displayName: 'Windows build and test'
+#  - bash: ./build
+#    displayName: 'Windows build and test'
 ##  dependsOn: Linux
 ##  condition: succeeded()
 ##- job: macOS

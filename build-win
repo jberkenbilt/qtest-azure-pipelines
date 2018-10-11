@@ -7,10 +7,10 @@ set -x
 
 
 
-ls -l $"VS140COMNTOOLS/../../VC/bin"
-ls -l $"VS140COMNTOOLS/../../VC/bin/amd64"
-ls -l $"VS140COMNTOOLS/../../VC/bin/"*.bat
-ls -l $"VS140COMNTOOLS/../../VC/bin/amd64/"*.bat
+ls -l "$VS140COMNTOOLS/../../VC/bin"
+ls -l "$VS140COMNTOOLS/../../VC/bin/amd64"
+ls -l "$VS140COMNTOOLS/../../VC/bin/"*.bat
+ls -l "$VS140COMNTOOLS/../../VC/bin/amd64/"*.bat
 
 #find "/c" -name 'vcvars*.bat' -print
 exit 0
