@@ -22,6 +22,7 @@ jobs:
       artifactName: generated
       downloadPath: $(System.DefaultWorkingDirectory)
   - bash: |
+      set -x
       cat generated/potato
       ls -lR
     displayName: 'Windows build and test'
@@ -37,6 +38,7 @@ jobs:
       artifactName: generated
       downloadPath: $(System.DefaultWorkingDirectory)
   - bash: |
+      set -x
       cat generated/potato
       ls -lR
     displayName: 'Mac build and test'
