@@ -25,9 +25,19 @@ unzip ../qpdf-external-libs-bin.zip
 cwd=`pwd`
 PATH=$cwd/libqpdf/build:$PATH
 
-rm -rf install-$tool$wordsize
+installdir=install-$tool$wordsize
+rm -rf $installdir
 ./config-$tool --with-windows-wordsize=$wordsize --enable-show-failed-test-output
 make -j8
 make -k check
 make install
 make distclean
+
+
+v=`(cd $installdir; ls -d qpdf-*)`
+cp -p README-windows-install.txt $installdir/$v/README.txt
+mkdir installers
+cd $installdir; zip -r ../installers/$v-bin-$i.zip $v
+
+set +x
+ls -l installers

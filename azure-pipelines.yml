@@ -38,6 +38,11 @@ jobs:
 #      downloadPath: $(System.DefaultWorkingDirectory)
   - script: build-win.bat $(wordsize) $(tool)
     displayName: 'Windows build and test'
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: '$(System.DefaultWorkingDirectory)/installers'
+      artifactName: installers
+    displayName: 'Upload Artifacts'
 ##  dependsOn: Linux
 ##  condition: succeeded()
 ##- job: macOS
