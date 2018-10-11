@@ -4,19 +4,18 @@ cd $(dirname $0)
 wordsize=$1
 tool=$2
 
-pacman -Sy --noconfirm make base-devel tar zip unzip
-if [[ $wordsize == 64 ]]; then
-    pacman -Sy --noconfirm mingw-w64-x86_64-toolchain
-    PATH="/c/tools/msys64/mingw64/bin:$PATH"
-else
-    pacman -Sy --noconfirm mingw-w64-i686-toolchain
-    PATH="/c/tools/msys64/mingw32/bin:$PATH"
-fi
-
-if [[ $tool == msvc ]]; then
-    cl
-else
+if [[ $tool == mingw ]]; then
+    pacman -Sy --noconfirm make base-devel tar zip unzip
+    if [[ $wordsize == 64 ]]; then
+        pacman -Sy --noconfirm mingw-w64-x86_64-toolchain
+        PATH="/c/tools/msys64/mingw64/bin:$PATH"
+    else
+        pacman -Sy --noconfirm mingw-w64-i686-toolchain
+        PATH="/c/tools/msys64/mingw32/bin:$PATH"
+    fi
     g++ -v
+elif [[ $tool == msvc ]]; then
+    cl
 fi
 curl -L https://downloads.sourceforge.net/project/qpdf/external-libs/2017-08-21/qpdf-external-libs-bin.zip -o qpdf-external-libs-bin.zip
 curl -L https://github.com/qpdf/qpdf/releases/download/release-qpdf-8.2.1/qpdf-8.2.1.tar.gz -o qpdf-8.2.1.tar.gz
