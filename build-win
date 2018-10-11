@@ -1,5 +1,10 @@
 #!/bin/bash
 set -x
+
+find "/c/Program Files*" -name 'vcvars*.bat' -print
+exit 0
+
+
 cl
 g++ --version
 curl -L https://downloads.sourceforge.net/project/qpdf/external-libs/2017-08-21/qpdf-external-libs-bin.zip -o qpdf-external-libs-bin.zip
@@ -11,6 +16,7 @@ cwd=`pwd`
 PATH=$cwd/libqpdf/build:$PATH
 for i in mingw msvc; do
     rm -rf {install,qtest}-$i$wordsize
+    # XXX show failed output instead of thing below
     ./config-$i
     make -j8
     make -k check || \

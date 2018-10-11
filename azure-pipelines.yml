@@ -1,43 +1,55 @@
 jobs:
-- job: Linux
-  pool:
-    vmImage: ubuntu-16.04
-  steps:
-  - bash: |
-      set -x
-      echo test > potato
-    displayName: 'Linux build and test'
-  - task: PublishBuildArtifacts@1
-    inputs:
-      pathtoPublish: '$(System.DefaultWorkingDirectory)/potato'
-      artifactName: generated
-    displayName: 'Upload Artifacts'
+##- job: Linux
+##  pool:
+##    vmImage: ubuntu-16.04
+##  steps:
+##  - bash: |
+##      set -x
+##      echo test > potato
+##    displayName: 'Linux build and test'
+##  - task: PublishBuildArtifacts@1
+##    inputs:
+##      pathtoPublish: '$(System.DefaultWorkingDirectory)/potato'
+##      artifactName: generated
+##    displayName: 'Upload Artifacts'
 - job: Windows
   pool:
     vmImage: vs2017-win2016
   steps:
-  - task: DownloadBuildArtifacts@0
-    displayName: 'Download Artifacts'
-    inputs:
-      artifactName: generated
-      downloadPath: $(System.DefaultWorkingDirectory)
+#  - task: DownloadBuildArtifacts@0
+#    displayName: 'Download Artifacts'
+#    inputs:
+#      artifactName: generated
+#      downloadPath: $(System.DefaultWorkingDirectory)
   - bash: ./build
     displayName: 'Windows build and test'
-  dependsOn: Linux
-  condition: succeeded()
-- job: macOS
-  pool:
-    vmImage: macOS-10.13
-  steps:
-  - task: DownloadBuildArtifacts@0
-    displayName: 'Download Artifacts'
-    inputs:
-      artifactName: generated
-      downloadPath: $(System.DefaultWorkingDirectory)
-  - bash: |
-      set -x
-      cat generated/potato
-      ls -lR
-    displayName: 'Mac build and test'
-  dependsOn: Linux
-  condition: succeeded()
+##  dependsOn: Linux
+##  condition: succeeded()
+##- job: macOS
+##  pool:
+##    vmImage: macOS-10.13
+##  steps:
+##  - task: DownloadBuildArtifacts@0
+##    displayName: 'Download Artifacts'
+##    inputs:
+##      artifactName: generated
+##      downloadPath: $(System.DefaultWorkingDirectory)
+##  - bash: |
+##      set -x
+##      cat generated/potato
+##      ls -lR
+##    displayName: 'Mac build and test'
+##  dependsOn: Linux
+##  condition: succeeded()
+
+# strategy:
+#    matrix:
+#      Python27:
+#        python.version: '2.7'
+#      Python35:
+#        python.version: '3.5'
+#      Python36:
+#        python.version: '3.6'
+#      Python37:
+#        python.version: '3.7'
+#    maxParallel: 4
