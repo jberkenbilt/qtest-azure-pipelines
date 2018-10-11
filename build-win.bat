@@ -9,7 +9,7 @@ if %2 == msvc (
 ) else (
     choco uninstall mingw
     choco install msys2
-    path C:\tools\msys64\usr\bin;%PATH%
+    path "C:\tools\msys64\usr\bin;%PATH%"
 )
 
 bash ./build %1 %2
