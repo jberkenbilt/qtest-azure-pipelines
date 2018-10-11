@@ -9,5 +9,13 @@ jobs:
   pool:
     vmImage: vs2017-win2016
   steps:
+  - bash: |
+      set -x
+      git config -l
+      echo "==="
+      git config --global core.autocrlf input
+      echo "==="
+      git config -l
+  - checkout: self
   - bash: cat -v file.c file.txt
     displayName: 'Windows test'
