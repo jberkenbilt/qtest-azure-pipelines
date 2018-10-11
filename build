@@ -9,3 +9,5 @@ for i in $PATH; do
     echo "path: $i"
     ls "$i"
 done
+printenv
+set
