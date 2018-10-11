@@ -3,9 +3,12 @@ set -ex
 wordsize=$1
 tool=$2
 
-config_args=""
-if [ $wordsize == 32 -a $tool == mingw ]; then
-    config_args="CC=x86_64-w64-mingw32-gcc CXX=x86_64-w64-mingw32-g++ LD=x86_64-w64-mingw32-ld AR=x86_64-w64-mingw32-ar RANLIB=x86_64-w64-mingw32-ranlib"
+if [ $wordsize == 64 ]; then
+    pacman -S mingw-w64-x86_64-toolchain
+    PATH="/c/tools/msys64/mingw64/bin:$PATH"
+else
+    pacman -S mingw-w64-i686-toolchain
+    PATH="/c/tools/msys64/mingw32/bin:$PATH"
 fi
 
 cl
@@ -20,7 +23,8 @@ PATH=$cwd/libqpdf/build:$PATH
 
 rm -rf {install,qtest}-$tool$wordsize
 # XXX show failed output instead of thing below
-./config-$tool --with-windows-wordsize=$wordsize --enable-show-failed-test-output $config_args
+
+./config-$tool --with-windows-wordsize=$wordsize --enable-show-failed-test-output
 make -j8
 make -k check || \
     { mkdir qtest-$tool$wordsize; \
