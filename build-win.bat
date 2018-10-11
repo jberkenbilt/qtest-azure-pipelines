@@ -6,6 +6,7 @@ if %2 == msvc (
     ) else (
        call "%VS140COMNTOOLS%\..\..\VC\bin\vcvars32.bat"
     )
+    choco install zip
     bash ./build-win %1 %2
 ) else (
     @rem The vs2017-win2016 pool has an ancient 64-bit-only mingw.
