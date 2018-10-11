@@ -11,6 +11,7 @@ else
     pacman -Sy --noconfirm mingw-w64-i686-toolchain
     PATH="/c/tools/msys64/mingw32/bin:$PATH"
 fi
+pacman -Sy --noconfirm tar zip unzip
 
 if [[ $tool == msvc ]]; then
     cl
