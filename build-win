@@ -3,9 +3,6 @@ set -ex
 wordsize=$1
 tool=$2
 
-ls C:/tools
-ls -lR C:/tools/mingw*
-
 choco install msys2
 pacman -Syuu
 pacman -S mingw-w64-x86_64-toolchain mingw-w64-i686-toolchain
