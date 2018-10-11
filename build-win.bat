@@ -8,6 +8,8 @@ if %2 == msvc (
     )
     bash ./build %1 %2
 ) else (
+    @rem The vs2017-win2016 pool has an ancient 64-bit-only mingw.
+    @rem Install msys2 so we can get current gcc toolchains.
     choco install msys2
     C:\tools\msys64\usr\bin\env.exe MSYSTEM=MINGW64 /bin/bash -l %CD%/build-win %1 %2
 )
