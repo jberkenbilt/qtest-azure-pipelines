@@ -1,0 +1,44 @@
+jobs:
+- job: Linux
+  pool:
+    vmImage: ubuntu-16.04
+  steps:
+  - bash: |
+      set -x
+      echo test > potato
+    displayName: 'Linux build and test'
+  - task: PublishBuildArtifacts@1
+    inputs:
+      pathtoPublish: '$(System.DefaultWorkingDirectory)/potato'
+      artifactName: generated
+    displayName: 'Upload Artifacts'
+- job: Windows
+  pool:
+    vmImage: vs2017-win2016
+  steps:
+  - task: DownloadBuildArtifacts@0
+    displayName: 'Download Artifacts'
+    inputs:
+      artifactName: generated
+      downloadPath: $(System.DefaultWorkingDirectory)
+  - bash: |
+      cat generated/potato
+      ls -lR
+    displayName: 'Windows build and test'
+  dependsOn: Linux
+  condition: succeeded()
+- job: macOS
+  pool:
+    vmImage: macOS-10.13
+  steps:
+  - task: DownloadBuildArtifacts@0
+    displayName: 'Download Artifacts'
+    inputs:
+      artifactName: generated
+      downloadPath: $(System.DefaultWorkingDirectory)
+  - bash: |
+      cat generated/potato
+      ls -lR
+    displayName: 'Mac build and test'
+  dependsOn: Linux
+  condition: succeeded()
