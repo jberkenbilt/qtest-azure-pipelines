@@ -3,7 +3,7 @@ set -ex
 wordsize=$1
 tool=$2
 
-if [ $wordsize == 64 ]; then
+if [[ $wordsize == 64 ]]; then
     pacman -S mingw-w64-x86_64-toolchain
     PATH="/c/tools/msys64/mingw64/bin:$PATH"
 else
@@ -11,8 +11,11 @@ else
     PATH="/c/tools/msys64/mingw32/bin:$PATH"
 fi
 
-cl
-g++ -v
+if [[ $tool == msvc ]]; then
+    cl
+else
+    g++ -v
+fi
 curl -L https://downloads.sourceforge.net/project/qpdf/external-libs/2017-08-21/qpdf-external-libs-bin.zip -o qpdf-external-libs-bin.zip
 curl -L https://github.com/qpdf/qpdf/releases/download/release-qpdf-8.2.1/qpdf-8.2.1.tar.gz -o qpdf-8.2.1.tar.gz
 tar xzf qpdf-8.2.1.tar.gz
