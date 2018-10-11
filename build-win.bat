@@ -6,7 +6,7 @@ if %2 == msvc (
     ) else (
        call "%VS140COMNTOOLS%\..\..\VC\bin\vcvars32.bat"
     )
-    bash ./build %1 %2
+    bash ./build-win %1 %2
 ) else (
     @rem The vs2017-win2016 pool has an ancient 64-bit-only mingw.
     @rem Install msys2 so we can get current gcc toolchains.
