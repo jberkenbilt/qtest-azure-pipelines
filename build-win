@@ -7,11 +7,15 @@ curl -L https://github.com/qpdf/qpdf/releases/download/release-qpdf-8.2.1/qpdf-8
 tar xzf qpdf-8.2.1.tar.gz
 cd qpdf-8.2.1
 unzip ../qpdf-external-libs-bin.zip
-./config-msvc
 cwd=`pwd`
 PATH=$cwd/libqpdf/build:$PATH
-make -j8
-make -k check || \
-    { mkdir qtest-$i$wordsize; \
-      tar cf - */build/qtest.log | (cd qtest-$i$wordsize; tar xf -) }
-make install
+for i in mingw msvc; do
+    rm -rf {install,qtest}-$i$wordsize
+    ./config-$i
+    make -j8
+    make -k check || \
+        { mkdir qtest-$i$wordsize; \
+          tar cf - */build/qtest.log | (cd qtest-$i$wordsize; tar xf -) }
+    make install
+    make distclean
+done
