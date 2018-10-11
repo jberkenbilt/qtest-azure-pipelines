@@ -18,17 +18,17 @@ jobs:
   strategy:
     matrix:
       msvc32:
-        wordsize=32
-        tool=msvc
+        wordsize: 32
+        tool: msvc
       msvc64:
-        wordsize=64
-        tool=msvc
+        wordsize: 64
+        tool: msvc
       mingw32:
-        wordsize=32
-        tool=mingw
+        wordsize: 32
+        tool: mingw
       mingw64:
-        wordsize=64
-        tool=mingw
+        wordsize: 64
+        tool: mingw
     maxParallel: 4
   steps:
 #  - task: DownloadBuildArtifacts@0
