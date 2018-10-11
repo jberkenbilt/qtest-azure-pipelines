@@ -1,16 +1,17 @@
 #!/bin/bash
 set -x
+echo $*
 if [ -d generated ]; then
     cat generated/potato
 fi
-ls -lR
-IFS=:
-for i in $PATH; do
-    echo "path: $i"
-    ls "$i"
-done
-printenv
-set
+#ls -lR
+#IFS=:
+#for i in $PATH; do
+#    echo "path: $i"
+#    ls "$i"
+#done
+#printenv
+#set
 if [[ $OSTYPE == msys ]]; then
-    ./build-win $1 $2
+    ./build-win "$@"
 fi
