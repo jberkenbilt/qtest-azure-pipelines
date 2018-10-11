@@ -9,5 +9,5 @@ if %2 == msvc (
     bash ./build %1 %2
 ) else (
     choco install msys2
-    C:\tools\msys64\usr\bin\env.exe MSYSTEM=MINGW64 /bin/bash -l ./build %1 %2
+    C:\tools\msys64\usr\bin\env.exe MSYSTEM=MINGW64 /bin/bash -l %CD%/build-win %1 %2
 )
