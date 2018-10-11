@@ -37,8 +37,8 @@ make distclean
 
 v=`(cd $installdir; ls -d qpdf-*)`
 cp -p README-windows-install.txt $installdir/$v/README.txt
-mkdir installers
-(cd $installdir; zip -r ../installers/$v-bin-$i.zip $v)
+mkdir ../installers
+(cd $installdir; zip -r ../../installers/$v-bin-$tool$wordsize.zip $v)
 
 set +x
-ls -l installers
+ls -l ../installers
