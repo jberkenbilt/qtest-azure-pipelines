@@ -5,7 +5,7 @@ jobs:
   steps:
   - bash: cat -v file.c file.txt
     displayName: 'Linux test'
-- task: PublishTestResults@2
+  - task: PublishTestResults@2
 #- job: Windows
 #  pool:
 #    vmImage: vs2017-win2016
