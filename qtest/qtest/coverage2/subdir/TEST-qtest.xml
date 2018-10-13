@@ -12,10 +12,10 @@
  </testsuite>
  <testsuite name="coverage">
   <testcase name="missing: two 1">
-   <failure message="not seen: missing: two 1"/>
+   <failure message="missing: two 1"/>
   </testcase>
   <testcase name="extra: three 1">
-   <failure message="not seen: extra: three 1"/>
+   <failure message="extra: three 1"/>
   </testcase>
  </testsuite>
 </testsuites>
