@@ -1,0 +1,203 @@
+<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="../qtest/bookmarks.test">
+  <testcase
+   id="pdf-bookmarks 1"
+   name="show:, style:"
+  />
+  <testcase
+   id="pdf-bookmarks 2"
+   name="show:, style: -lines"
+  />
+  <testcase
+   id="pdf-bookmarks 3"
+   name="show:, style: -numbers"
+  />
+  <testcase
+   id="pdf-bookmarks 4"
+   name="show: -show-open, style:"
+  />
+  <testcase
+   id="pdf-bookmarks 5"
+   name="show: -show-open, style: -lines"
+  />
+  <testcase
+   id="pdf-bookmarks 6"
+   name="show: -show-open, style: -numbers"
+  />
+  <testcase
+   id="pdf-bookmarks 7"
+   name="no bookmarks"
+  />
+  <testcase
+   id="pdf-bookmarks 8"
+   name="bad"
+  />
+  <testcase
+   id="pdf-bookmarks 9"
+   name="encrypted, targets"
+  />
+  <testcase
+   id="pdf-bookmarks 10"
+   name="bookmarks deleted"
+  />
+  <testcase
+   id="pdf-bookmarks 11"
+   name="non-trivial pdf doc to unicode"
+  />
+ </testsuite>
+ <testsuite name="../qtest/count-strings.test">
+  <testcase
+   id="pdf-count-strings 1"
+   name="filter tokens"
+  />
+ </testsuite>
+ <testsuite name="../qtest/create.test">
+  <testcase
+   id="create 1"
+   name="create a simple PDF"
+  />
+ </testsuite>
+ <testsuite name="../qtest/double-page-size.test">
+  <testcase
+   id="double-page-size 1"
+   name="double page size"
+  />
+  <testcase
+   id="double-page-size 2"
+   name="check output"
+  />
+ </testsuite>
+ <testsuite name="../qtest/filter-tokens.test">
+  <testcase
+   id="pdf-filter-tokens 1"
+   name="filter tokens"
+  />
+  <testcase
+   id="pdf-filter-tokens 2"
+   name="check output"
+  />
+ </testsuite>
+ <testsuite name="../qtest/invert-images.test">
+  <testcase
+   id="invert-images 1"
+   name="double page size"
+  />
+  <testcase
+   id="invert-images 2"
+   name="check output"
+  />
+ </testsuite>
+ <testsuite name="../qtest/linearize.test">
+  <testcase
+   id="linearize 1"
+   name="linearize"
+  />
+  <testcase
+   id="linearize 2"
+   name="check"
+  />
+ </testsuite>
+ <testsuite name="../qtest/mod-info.test">
+  <testcase
+   id="pdf-mod-info 1"
+   name="usage #1"
+  />
+  <testcase
+   id="pdf-mod-info 2"
+   name="usage #2"
+  />
+  <testcase
+   id="pdf-mod-info 3"
+   name="usage #3"
+  />
+  <testcase
+   id="pdf-mod-info 4"
+   name="usage #4"
+  />
+  <testcase
+   id="pdf-mod-info 5"
+   name="dump #1"
+  />
+  <testcase
+   id="pdf-mod-info 6"
+   name="dump #2"
+  />
+  <testcase
+   id="pdf-mod-info 7"
+   name="dump #3"
+  />
+  <testcase
+   id="pdf-mod-info 8"
+   name="modify Subject"
+  />
+  <testcase
+   id="pdf-mod-info 9"
+   name="modify Subject output"
+  />
+  <testcase
+   id="pdf-mod-info 10"
+   name="add Subject, remove Producer, modify CreationDate"
+  />
+  <testcase
+   id="pdf-mod-info 11"
+   name="add Subject, remove Producer, modify CreationDate output"
+  />
+  <testcase
+   id="pdf-mod-info 12"
+   name="add Subject (empty-info file)"
+  />
+  <testcase
+   id="pdf-mod-info 13"
+   name="add Subject (empty-info file) output"
+  />
+  <testcase
+   id="pdf-mod-info 14"
+   name="in-place Producer added (no-info file)"
+  />
+  <testcase
+   id="pdf-mod-info 15"
+   name="in-place Producer added (no-info file) output"
+  />
+ </testsuite>
+ <testsuite name="../qtest/npages.test">
+  <testcase
+   id="pdf-npages 1"
+   name="normal"
+  />
+  <testcase
+   id="pdf-npages 2"
+   name="error"
+  />
+ </testsuite>
+ <testsuite name="../qtest/parse-content.test">
+  <testcase
+   id="pdf-parse-content 1"
+   name="parse content"
+  />
+ </testsuite>
+ <testsuite name="../qtest/pdf-split-pages.test">
+  <testcase
+   id="pdf-split-pages 1"
+   name="split"
+  />
+  <testcase
+   id="pdf-split-pages 2"
+   name="check page 1"
+  />
+  <testcase
+   id="pdf-split-pages 3"
+   name="check page 2"
+  />
+ </testsuite>
+ <testsuite name="../qtest/set-form-values.test">
+  <testcase
+   id="pdf-set-form-values 1"
+   name="set form values"
+  />
+  <testcase
+   id="pdf-set-form-values 2"
+   name="compare files"
+  />
+ </testsuite>
+</testsuites>

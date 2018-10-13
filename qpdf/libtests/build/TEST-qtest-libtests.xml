@@ -1,0 +1,753 @@
+<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="../qtest/aes.test">
+  <testcase
+   id="AES 1"
+   name="encrypt test vector"
+  />
+  <testcase
+   id="AES 2"
+   name="check output"
+  />
+  <testcase
+   id="AES 3"
+   name="decrypt test vector"
+  />
+  <testcase
+   id="AES 4"
+   name="check output"
+  />
+  <testcase
+   id="AES 5"
+   name="encrypt data1"
+  />
+  <testcase
+   id="AES 6"
+   name="encrypt data1 again"
+  />
+  <testcase
+   id="AES 7"
+   name="check size"
+  />
+  <testcase
+   id="AES 8"
+   name="check size"
+  />
+  <testcase
+   id="AES 9"
+   name="verify files are different"
+  />
+  <testcase
+   id="AES 10"
+   name="decrypt data1"
+  />
+  <testcase
+   id="AES 11"
+   name="decrypt data1 again"
+  />
+  <testcase
+   id="AES 12"
+   name="check output"
+  />
+  <testcase
+   id="AES 13"
+   name="check output"
+  />
+  <testcase
+   id="AES 14"
+   name="encrypt data2"
+  />
+  <testcase
+   id="AES 15"
+   name="encrypt data2 again"
+  />
+  <testcase
+   id="AES 16"
+   name="check size"
+  />
+  <testcase
+   id="AES 17"
+   name="check size"
+  />
+  <testcase
+   id="AES 18"
+   name="verify files are different"
+  />
+  <testcase
+   id="AES 19"
+   name="decrypt data2"
+  />
+  <testcase
+   id="AES 20"
+   name="decrypt data2 again"
+  />
+  <testcase
+   id="AES 21"
+   name="check output"
+  />
+  <testcase
+   id="AES 22"
+   name="check output"
+  />
+ </testsuite>
+ <testsuite name="../qtest/ascii85.test">
+  <testcase
+   id="ascii85 1"
+   name="decode"
+  />
+  <testcase
+   id="ascii85 2"
+   name="partial decode"
+  />
+ </testsuite>
+ <testsuite name="../qtest/bits.test">
+  <testcase
+   id="bits 1"
+   name="bits"
+  />
+ </testsuite>
+ <testsuite name="../qtest/buffer.test">
+  <testcase
+   id="buffer 1"
+   name="buffer"
+  />
+ </testsuite>
+ <testsuite name="../qtest/closedfile.test">
+  <testcase
+   id="closed_file_input_source 1"
+   name="closed file input source"
+  />
+ </testsuite>
+ <testsuite name="../qtest/dct.test">
+  <testcase
+   id="dct 1"
+   name="compress"
+  />
+  <testcase
+   id="dct 2"
+   name="decompress"
+  />
+  <testcase
+   id="dct 3"
+   name="bytes in data"
+  />
+  <testcase
+   id="dct 4"
+   name="data is close enough"
+  />
+  <testcase
+   id="dct 5"
+   name="compress"
+  />
+  <testcase
+   id="dct 6"
+   name="decompress"
+  />
+  <testcase
+   id="dct 7"
+   name="bytes in data"
+  />
+  <testcase
+   id="dct 8"
+   name="data is close enough"
+  />
+ </testsuite>
+ <testsuite name="../qtest/flate.test">
+  <testcase
+   id="flate 1"
+   name="check farbage"
+  />
+  <testcase
+   id="flate 2"
+   name="run driver"
+  />
+  <testcase
+   id="flate 3"
+   name="check farbage"
+  />
+  <testcase
+   id="flate 4"
+   name="compressed file correct"
+  />
+  <testcase
+   id="flate 5"
+   name="uncompress filter works"
+  />
+  <testcase
+   id="flate 6"
+   name="double filter works"
+  />
+ </testsuite>
+ <testsuite name="../qtest/hex.test">
+  <testcase
+   id="hex 1"
+   name="decode"
+  />
+  <testcase
+   id="hex 2"
+   name="partial decode"
+  />
+ </testsuite>
+ <testsuite name="../qtest/input_source.test">
+  <testcase
+   id="InputSource 1"
+   name="input source tests"
+  />
+ </testsuite>
+ <testsuite name="../qtest/lzw.test">
+  <testcase
+   id="lzw 1"
+   name="decode: early code change"
+  />
+  <testcase
+   id="lzw 2"
+   name="check output"
+  />
+  <testcase
+   id="lzw 3"
+   name="decode: no early code change"
+  />
+  <testcase
+   id="lzw 4"
+   name="check output"
+  />
+ </testsuite>
+ <testsuite name="../qtest/md5.test">
+  <testcase
+   id="md5 1"
+   name="md5"
+  />
+ </testsuite>
+ <testsuite name="../qtest/ph.test">
+  <testcase
+   id="ph 1"
+   name="PointerHolder"
+  />
+ </testsuite>
+ <testsuite name="../qtest/predictors.test">
+  <testcase
+   id="predictors 1"
+   name="decode columns = 4"
+  />
+  <testcase
+   id="predictors 2"
+   name="check output"
+  />
+  <testcase
+   id="predictors 3"
+   name="decode columns = 5"
+  />
+  <testcase
+   id="predictors 4"
+   name="check output"
+  />
+  <testcase
+   id="predictors 5"
+   name="encode columns = 4"
+  />
+  <testcase
+   id="predictors 6"
+   name="check output"
+  />
+  <testcase
+   id="predictors 7"
+   name="encode columns = 5"
+  />
+  <testcase
+   id="predictors 8"
+   name="check output"
+  />
+  <testcase
+   id="predictors 9"
+   name="decode 01--32-3-16"
+  />
+  <testcase
+   id="predictors 10"
+   name="check output for 01--32-3-16"
+  />
+  <testcase
+   id="predictors 11"
+   name="decode 02--32-1-8"
+  />
+  <testcase
+   id="predictors 12"
+   name="check output for 02--32-1-8"
+  />
+  <testcase
+   id="predictors 13"
+   name="decode 03--32-3-8"
+  />
+  <testcase
+   id="predictors 14"
+   name="check output for 03--32-3-8"
+  />
+  <testcase
+   id="predictors 15"
+   name="decode 04--32-1-8"
+  />
+  <testcase
+   id="predictors 16"
+   name="check output for 04--32-1-8"
+  />
+  <testcase
+   id="predictors 17"
+   name="decode 05--32-3-8"
+  />
+  <testcase
+   id="predictors 18"
+   name="check output for 05--32-3-8"
+  />
+  <testcase
+   id="predictors 19"
+   name="decode 06--32-1-8"
+  />
+  <testcase
+   id="predictors 20"
+   name="check output for 06--32-1-8"
+  />
+  <testcase
+   id="predictors 21"
+   name="decode 07--32-3-8"
+  />
+  <testcase
+   id="predictors 22"
+   name="check output for 07--32-3-8"
+  />
+  <testcase
+   id="predictors 23"
+   name="decode 08--32-1-8"
+  />
+  <testcase
+   id="predictors 24"
+   name="check output for 08--32-1-8"
+  />
+  <testcase
+   id="predictors 25"
+   name="decode 09--32-3-8"
+  />
+  <testcase
+   id="predictors 26"
+   name="check output for 09--32-3-8"
+  />
+  <testcase
+   id="predictors 27"
+   name="decode 10--32-1-8"
+  />
+  <testcase
+   id="predictors 28"
+   name="check output for 10--32-1-8"
+  />
+  <testcase
+   id="predictors 29"
+   name="decode 11--32-3-8"
+  />
+  <testcase
+   id="predictors 30"
+   name="check output for 11--32-3-8"
+  />
+  <testcase
+   id="predictors 31"
+   name="decode 12--32-1-4"
+  />
+  <testcase
+   id="predictors 32"
+   name="check output for 12--32-1-4"
+  />
+  <testcase
+   id="predictors 33"
+   name="decode tiff 01--16-1-8"
+  />
+  <testcase
+   id="predictors 34"
+   name="check output for tiff-01--16-1-8"
+  />
+  <testcase
+   id="predictors 35"
+   name="encode tiff 01--16-1-8"
+  />
+  <testcase
+   id="predictors 36"
+   name="check output for tiff-01--16-1-8"
+  />
+  <testcase
+   id="predictors 37"
+   name="decode tiff 02--8-2-4"
+  />
+  <testcase
+   id="predictors 38"
+   name="check output for tiff-02--8-2-4"
+  />
+  <testcase
+   id="predictors 39"
+   name="encode tiff 02--8-2-4"
+  />
+  <testcase
+   id="predictors 40"
+   name="check output for tiff-02--8-2-4"
+  />
+  <testcase
+   id="predictors 41"
+   name="decode tiff 03--4-1-16"
+  />
+  <testcase
+   id="predictors 42"
+   name="check output for tiff-03--4-1-16"
+  />
+  <testcase
+   id="predictors 43"
+   name="encode tiff 03--4-1-16"
+  />
+  <testcase
+   id="predictors 44"
+   name="check output for tiff-03--4-1-16"
+  />
+ </testsuite>
+ <testsuite name="../qtest/qutil.test">
+  <testcase
+   id="qutil 1"
+   name="QUtil"
+  />
+ </testsuite>
+ <testsuite name="../qtest/random.test">
+  <testcase
+   id="random 1"
+   name="Random Data Providers"
+  />
+ </testsuite>
+ <testsuite name="../qtest/rc4.test">
+  <testcase
+   id="RC4 1"
+   name="test 1"
+  />
+  <testcase
+   id="RC4 2"
+   name="check output"
+  />
+  <testcase
+   id="RC4 3"
+   name="test 1 reverse"
+  >
+   <failure>
+cwd: /home/ejb/source/qpdf/qpdf/libtests/qtest/rc4
+command: rc4 0123456789abcdef test1.out tmp2-1.out
+stracktrace:
+ at rc4.test line 30.
+  Expected status: 5
+  Actual   status: 0
+-- BEGIN EXPECTED OUTPUT --
+quack-- END EXPECTED OUTPUT --
+-- ACTUAL OUTPUT --
+-- ACTUAL OUTPUT --
+-- DIFF EXPECTED ACTUAL --
+--- /tmp/testtemp.19323/expected	2018-10-13 14:39:48.271383755 -0400
++++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.267383730 -0400
+@@ -1 +0,0 @@
+-quack
+\ No newline at end of file
+-- END DIFFERENCES --
+   </failure>
+  </testcase>
+  <testcase
+   id="RC4 4"
+   name="check output"
+  />
+  <testcase
+   id="RC4 5"
+   name="test 2"
+  />
+  <testcase
+   id="RC4 6"
+   name="check output"
+  >
+   <failure>
+cwd: /home/ejb/source/qpdf/qpdf/libtests/qtest/rc4
+expected output in test2.out
+stracktrace:
+ at rc4.test line 27.
+-- BEGIN EXPECTED OUTPUT --
+t&#x94;&#xc2;&#xe7;&#x10;K&#x08;y
+asdfasdf
+-- END EXPECTED OUTPUT --
+-- ACTUAL OUTPUT --
+t&#x94;&#xc2;&#xe7;&#x10;K&#x08;y-- ACTUAL OUTPUT --
+-- DIFF EXPECTED ACTUAL --
+--- test2.out	2018-10-13 12:56:56.961422322 -0400
++++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.279383808 -0400
+@@ -1,2 +1 @@
+-t&#x94;&#xc2;&#xe7;&#x10;K&#x08;y
+-asdfasdf
++t&#x94;&#xc2;&#xe7;&#x10;K&#x08;y
+\ No newline at end of file
+-- END DIFFERENCES --
+   </failure>
+  </testcase>
+  <testcase
+   id="RC4 7"
+   name="test 2 reverse"
+  >
+   <failure>
+cwd: /home/ejb/source/qpdf/qpdf/libtests/qtest/rc4
+command: rc4 0123456789abcdef test2.out tmp2-2.out
+stracktrace:
+ at rc4.test line 30.
+  Expected status: 5
+  Actual   status: 0
+-- BEGIN EXPECTED OUTPUT --
+quack-- END EXPECTED OUTPUT --
+-- ACTUAL OUTPUT --
+-- ACTUAL OUTPUT --
+-- DIFF EXPECTED ACTUAL --
+--- /tmp/testtemp.19323/expected	2018-10-13 14:39:48.283383835 -0400
++++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.283383835 -0400
+@@ -1 +0,0 @@
+-quack
+\ No newline at end of file
+-- END DIFFERENCES --
+   </failure>
+  </testcase>
+  <testcase
+   id="RC4 8"
+   name="check output"
+  >
+   <failure>
+cwd: /home/ejb/source/qpdf/qpdf/libtests/qtest/rc4
+expected output in test2.in
+stracktrace:
+ at rc4.test line 33.
+-- BEGIN EXPECTED OUTPUT --
+&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;-- END EXPECTED OUTPUT --
+-- ACTUAL OUTPUT --
+&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x07;*&#xa6;7T&#xee;m&#x98;&#xfd;&#x10;-- ACTUAL OUTPUT --
+-- DIFF EXPECTED ACTUAL --
+--- test2.in	2011-08-02 09:01:31.000000000 -0400
++++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.287383860 -0400
+@@ -1 +1 @@
+-&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;
+\ No newline at end of file
++&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x07;*&#xa6;7T&#xee;m&#x98;&#xfd;&#x10;
+\ No newline at end of file
+-- END DIFFERENCES --
+   </failure>
+  </testcase>
+  <testcase
+   id="RC4 9"
+   name="test 3"
+  />
+  <testcase
+   id="RC4 10"
+   name="check output"
+  />
+  <testcase
+   id="RC4 11"
+   name="test 3 reverse"
+  >
+   <failure>
+cwd: /home/ejb/source/qpdf/qpdf/libtests/qtest/rc4
+command: rc4 0000000000000000 test3.out tmp2-3.out
+stracktrace:
+ at rc4.test line 30.
+  Expected status: 5
+  Actual   status: 0
+-- BEGIN EXPECTED OUTPUT --
+quack-- END EXPECTED OUTPUT --
+-- ACTUAL OUTPUT --
+-- ACTUAL OUTPUT --
+-- DIFF EXPECTED ACTUAL --
+--- /tmp/testtemp.19323/expected	2018-10-13 14:39:48.299383939 -0400
++++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.299383939 -0400
+@@ -1 +0,0 @@
+-quack
+\ No newline at end of file
+-- END DIFFERENCES --
+   </failure>
+  </testcase>
+  <testcase
+   id="RC4 12"
+   name="check output"
+  />
+  <testcase
+   id="RC4 13"
+   name="test 4"
+  />
+  <testcase
+   id="RC4 14"
+   name="check output"
+  />
+  <testcase
+   id="RC4 15"
+   name="test 4 reverse"
+  >
+   <failure>
+cwd: /home/ejb/source/qpdf/qpdf/libtests/qtest/rc4
+command: rc4 ef012345 test4.out tmp2-4.out
+stracktrace:
+ at rc4.test line 30.
+  Expected status: 5
+  Actual   status: 0
+-- BEGIN EXPECTED OUTPUT --
+quack-- END EXPECTED OUTPUT --
+-- ACTUAL OUTPUT --
+-- ACTUAL OUTPUT --
+-- DIFF EXPECTED ACTUAL --
+--- /tmp/testtemp.19323/expected	2018-10-13 14:39:48.315384044 -0400
++++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.315384044 -0400
+@@ -1 +0,0 @@
+-quack
+\ No newline at end of file
+-- END DIFFERENCES --
+   </failure>
+  </testcase>
+  <testcase
+   id="RC4 16"
+   name="check output"
+  />
+  <testcase
+   id="RC4 17"
+   name="test 5"
+  />
+  <testcase
+   id="RC4 18"
+   name="check output"
+  />
+  <testcase
+   id="RC4 19"
+   name="test 5 reverse"
+  >
+   <failure>
+cwd: /home/ejb/source/qpdf/qpdf/libtests/qtest/rc4
+command: rc4 0123456789abcdef test5.out tmp2-5.out
+stracktrace:
+ at rc4.test line 30.
+  Expected status: 5
+  Actual   status: 0
+-- BEGIN EXPECTED OUTPUT --
+quack-- END EXPECTED OUTPUT --
+-- ACTUAL OUTPUT --
+-- ACTUAL OUTPUT --
+-- DIFF EXPECTED ACTUAL --
+--- /tmp/testtemp.19323/expected	2018-10-13 14:39:48.335384175 -0400
++++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.331384150 -0400
+@@ -1 +0,0 @@
+-quack
+\ No newline at end of file
+-- END DIFFERENCES --
+   </failure>
+  </testcase>
+  <testcase
+   id="RC4 20"
+   name="check output"
+  />
+ </testsuite>
+ <testsuite name="../qtest/runlength.test">
+  <testcase
+   id="runlength 1"
+   name="encode 01"
+  />
+  <testcase
+   id="runlength 2"
+   name="check encoded output"
+  />
+  <testcase
+   id="runlength 3"
+   name="decode 01.encoded"
+  />
+  <testcase
+   id="runlength 4"
+   name="check decoded output"
+  />
+  <testcase
+   id="runlength 5"
+   name="encode 02"
+  />
+  <testcase
+   id="runlength 6"
+   name="check encoded output"
+  />
+  <testcase
+   id="runlength 7"
+   name="decode 02.encoded"
+  />
+  <testcase
+   id="runlength 8"
+   name="check decoded output"
+  />
+  <testcase
+   id="runlength 9"
+   name="encode 03"
+  />
+  <testcase
+   id="runlength 10"
+   name="check encoded output"
+  />
+  <testcase
+   id="runlength 11"
+   name="decode 03.encoded"
+  />
+  <testcase
+   id="runlength 12"
+   name="check decoded output"
+  />
+  <testcase
+   id="runlength 13"
+   name="encode 04"
+  />
+  <testcase
+   id="runlength 14"
+   name="check encoded output"
+  />
+  <testcase
+   id="runlength 15"
+   name="decode 04.encoded"
+  />
+  <testcase
+   id="runlength 16"
+   name="check decoded output"
+  />
+  <testcase
+   id="runlength 17"
+   name="encode 05"
+  />
+  <testcase
+   id="runlength 18"
+   name="check encoded output"
+  />
+  <testcase
+   id="runlength 19"
+   name="decode 05.encoded"
+  />
+  <testcase
+   id="runlength 20"
+   name="check decoded output"
+  />
+  <testcase
+   id="runlength 21"
+   name="encode empty"
+  />
+  <testcase
+   id="runlength 22"
+   name="check encoded output"
+  />
+  <testcase
+   id="runlength 23"
+   name="decode empty.encoded"
+  />
+  <testcase
+   id="runlength 24"
+   name="check decoded output"
+  />
+  <testcase
+   id="runlength 25"
+   name="decode with embedded EOD"
+  />
+  <testcase
+   id="runlength 26"
+   name="check decoded output"
+  />
+ </testsuite>
+ <testsuite name="../qtest/sha2.test">
+  <testcase
+   id="sha2 1"
+   name="sha2"
+  />
+ </testsuite>
+</testsuites>
