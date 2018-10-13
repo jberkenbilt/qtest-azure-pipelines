@@ -6,11 +6,14 @@ jobs:
   - bash: cat -v file.c file.txt
     displayName: 'Linux test'
   - task: PublishTestResults@2
-    buildPlatform: Linux
+    inputs:
+      buildPlatform: Linux
   - task: PublishTestResults@2
-    buildPlatform: Windows msvc64
+    inputs:
+      buildPlatform: Windows msvc64
   - task: PublishTestResults@2
-    buildPlatform: Windows msvc32
+    inputs:
+      buildPlatform: Windows msvc32
 #- job: Windows
 #  pool:
 #    vmImage: vs2017-win2016
