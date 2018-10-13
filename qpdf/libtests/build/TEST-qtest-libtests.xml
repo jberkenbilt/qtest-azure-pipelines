@@ -439,8 +439,8 @@ quack-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.19323/expected	2018-10-13 14:39:48.271383755 -0400
-+++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.267383730 -0400
+--- /tmp/testtemp.31289/expected	2018-10-13 15:07:30.589805836 -0400
++++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.589805836 -0400
 @@ -1 +0,0 @@
 -quack
 \ No newline at end of file
@@ -465,18 +465,18 @@ expected output in test2.out
 stracktrace:
  at rc4.test line 27.
 -- BEGIN EXPECTED OUTPUT --
-t&#x94;&#xc2;&#xe7;&#x10;K&#x08;y
-asdfasdf
+t&#x94;&#xc2;&#xe7;[0x10]K[0x08]y
+qwer
 -- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
-t&#x94;&#xc2;&#xe7;&#x10;K&#x08;y-- ACTUAL OUTPUT --
+t&#x94;&#xc2;&#xe7;[0x10]K[0x08]y-- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- test2.out	2018-10-13 12:56:56.961422322 -0400
-+++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.279383808 -0400
+--- test2.out	2018-10-13 15:06:22.457370403 -0400
++++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.601805913 -0400
 @@ -1,2 +1 @@
--t&#x94;&#xc2;&#xe7;&#x10;K&#x08;y
--asdfasdf
-+t&#x94;&#xc2;&#xe7;&#x10;K&#x08;y
+-t&#x94;&#xc2;&#xe7;[0x10]K[0x08]y
+-qwer
++t&#x94;&#xc2;&#xe7;[0x10]K[0x08]y
 \ No newline at end of file
 -- END DIFFERENCES --
    </failure>
@@ -497,8 +497,8 @@ quack-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.19323/expected	2018-10-13 14:39:48.283383835 -0400
-+++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.283383835 -0400
+--- /tmp/testtemp.31289/expected	2018-10-13 15:07:30.605805938 -0400
++++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.601805913 -0400
 @@ -1 +0,0 @@
 -quack
 \ No newline at end of file
@@ -515,16 +515,16 @@ expected output in test2.in
 stracktrace:
  at rc4.test line 33.
 -- BEGIN EXPECTED OUTPUT --
-&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;-- END EXPECTED OUTPUT --
+[0x00][0x00][0x00][0x00][0x00][0x00][0x00][0x00]-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
-&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x07;*&#xa6;7T&#xee;m&#x98;&#xfd;&#x10;-- ACTUAL OUTPUT --
+[0x00][0x00][0x00][0x00][0x00][0x00][0x00][0x00][0x07]:&#xa2;6@&#x85;-- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
 --- test2.in	2011-08-02 09:01:31.000000000 -0400
-+++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.287383860 -0400
++++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.609805964 -0400
 @@ -1 +1 @@
--&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;
+-[0x00][0x00][0x00][0x00][0x00][0x00][0x00][0x00]
 \ No newline at end of file
-+&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x00;&#x07;*&#xa6;7T&#xee;m&#x98;&#xfd;&#x10;
++[0x00][0x00][0x00][0x00][0x00][0x00][0x00][0x00][0x07]:&#xa2;6@&#x85;
 \ No newline at end of file
 -- END DIFFERENCES --
    </failure>
@@ -553,8 +553,8 @@ quack-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.19323/expected	2018-10-13 14:39:48.299383939 -0400
-+++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.299383939 -0400
+--- /tmp/testtemp.31289/expected	2018-10-13 15:07:30.621806040 -0400
++++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.617806015 -0400
 @@ -1 +0,0 @@
 -quack
 \ No newline at end of file
@@ -589,8 +589,8 @@ quack-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.19323/expected	2018-10-13 14:39:48.315384044 -0400
-+++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.315384044 -0400
+--- /tmp/testtemp.31289/expected	2018-10-13 15:07:30.633806117 -0400
++++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.633806117 -0400
 @@ -1 +0,0 @@
 -quack
 \ No newline at end of file
@@ -625,8 +625,8 @@ quack-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.19323/expected	2018-10-13 14:39:48.335384175 -0400
-+++ /tmp/testtemp.19323/actual	2018-10-13 14:39:48.331384150 -0400
+--- /tmp/testtemp.31289/expected	2018-10-13 15:07:30.649806219 -0400
++++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.645806194 -0400
 @@ -1 +0,0 @@
 -quack
 \ No newline at end of file
