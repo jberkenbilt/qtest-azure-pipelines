@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="qtest/example.test">
+  <testcase
+   id="example 1"
+   name="basic test"
+  />
+  <testcase
+   id="example 2"
+   name="basic test repeated"
+  />
+  <testcase
+   id="example 3"
+   name="usage message"
+  />
+  <testcase
+   id="example 4"
+   name="invalid test case"
+  />
+  <testcase
+   id="example 5"
+   name="invalid test case with !0 exit status"
+  />
+  <testcase
+   id="example 6"
+   name="exit on signal"
+  />
+  <testcase
+   id="example 7"
+   name="exit on signal with !0"
+  />
+  <testcase
+   id="example 8"
+   name="arguments with spaces"
+  />
+  <testcase
+   id="example 9"
+   name="filter example"
+  />
+  <testcase
+   id="example 10"
+   name="filter.tmp-out nonexistent"
+  />
+  <testcase
+   id="example 11"
+   name="output to file"
+  />
+  <testcase
+   id="example 12"
+   name="check output"
+  />
+  <testcase
+   id="example 13"
+   name="expected failure"
+  />
+  <testcase
+   id="example 14"
+   name="normalize spaces"
+  />
+  <testcase
+   id="example 15"
+   name="normalize newlines"
+  />
+  <testcase
+   id="example 16"
+   name="normalize space and newlines"
+  />
+  <testcase
+   id="example 17"
+   name="multithreaded program"
+  />
+  <testcase
+   id="example 18"
+   name="multithreaded program: multithreaded data"
+  />
+  <testcase
+   id="example 19"
+   name="multithreaded program: thread main"
+  />
+  <testcase
+   id="example 20"
+   name="multithreaded program: thread A"
+  />
+  <testcase
+   id="example 21"
+   name="multithreaded program: thread B"
+  />
+  <testcase
+   id="example 22"
+   name="multithreaded program: thread C"
+  />
+  <testcase
+   id="example 23"
+   name="multithreaded program: seqgroup e2"
+  />
+  <testcase
+   id="example 24"
+   name="multithreaded program: seqgroup e3"
+  />
+  <testcase
+   id="example 25"
+   name="multithreaded program: all subcases passed"
+  />
+ </testsuite>
+ <testsuite name="qtest/other.test">
+  <testcase
+   id="other 1"
+   name="other test"
+  />
+ </testsuite>
+</testsuites>

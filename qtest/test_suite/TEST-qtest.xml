@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="qtest/framework.test">
+  <testcase
+   id="test framework 1"
+   name="check start directory"
+  />
+  <testcase
+   id="test framework 2"
+   name="passing test suite"
+  />
+  <testcase
+   id="test framework 3"
+   name="check qtest.log"
+  />
+  <testcase
+   id="test framework 4"
+   name="check qtest-results.xml"
+  />
+  <testcase
+   id="test framework 5"
+   name="validate qtest-results.xml"
+  />
+  <testcase
+   id="test framework 6"
+   name="prompt from environment variable"
+  />
+  <testcase
+   id="test framework 7"
+   name="check qtest.log"
+  />
+  <testcase
+   id="test framework 8"
+   name="check qtest-results.xml"
+  />
+  <testcase
+   id="test framework 9"
+   name="validate qtest-results.xml"
+  />
+  <testcase
+   id="test framework 10"
+   name="failing test suites"
+  />
+  <testcase
+   id="test framework 11"
+   name="check qtest.log"
+  />
+  <testcase
+   id="test framework 12"
+   name="check qtest-results.xml"
+  />
+  <testcase
+   id="test framework 13"
+   name="validate qtest-results.xml"
+  />
+  <testcase
+   id="test framework 14"
+   name="failing test suites (2)"
+  />
+  <testcase
+   id="test framework 15"
+   name="check qtest.log"
+  />
+  <testcase
+   id="test framework 16"
+   name="check qtest-results.xml"
+  />
+  <testcase
+   id="test framework 17"
+   name="validate qtest-results.xml"
+  />
+  <testcase
+   id="test framework 18"
+   name="pre-test coverage checks"
+  />
+  <testcase
+   id="test framework 19"
+   name="check qtest.log"
+  />
+  <testcase
+   id="test framework 20"
+   name="no qtest-results.xml"
+  />
+  <testcase
+   id="test framework 21"
+   name="post-test coverage checks"
+  />
+  <testcase
+   id="test framework 22"
+   name="check qtest.log"
+  />
+  <testcase
+   id="test framework 23"
+   name="check qtest-results.xml"
+  />
+  <testcase
+   id="test framework 24"
+   name="validate qtest-results.xml"
+  />
+  <testcase
+   id="test framework 25"
+   name="multithreaded 1"
+  />
+  <testcase
+   id="test framework 26"
+   name="multithreaded 1: multithreaded data"
+  />
+  <testcase
+   id="test framework 27"
+   name="multithreaded 1: thread A"
+  />
+  <testcase
+   id="test framework 28"
+   name="multithreaded 1: thread B"
+  />
+  <testcase
+   id="test framework 29"
+   name="multithreaded 1: thread C 1"
+  />
+  <testcase
+   id="test framework 30"
+   name="multithreaded 1: seqgroup b g"
+  />
+  <testcase
+   id="test framework 31"
+   name="multithreaded 1: seqgroup c"
+  />
+  <testcase
+   id="test framework 32"
+   name="multithreaded 1: all subcases passed"
+  />
+  <testcase
+   id="test framework 33"
+   name="multithreaded 2"
+  />
+  <testcase
+   id="test framework 34"
+   name="multithreaded 2: multithreaded data"
+  />
+  <testcase
+   id="test framework 35"
+   name="multithreaded 2: thread A"
+  />
+  <testcase
+   id="test framework 36"
+   name="multithreaded 2: thread B"
+  />
+  <testcase
+   id="test framework 37"
+   name="multithreaded 2: thread C 1"
+  />
+  <testcase
+   id="test framework 38"
+   name="multithreaded 2: seqgroup b g"
+  />
+  <testcase
+   id="test framework 39"
+   name="multithreaded 2: seqgroup c"
+  />
+  <testcase
+   id="test framework 40"
+   name="multithreaded 2: all subcases passed"
+  />
+ </testsuite>
+</testsuites>
