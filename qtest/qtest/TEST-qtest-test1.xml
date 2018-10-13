@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<testsuites>
+ <testsuite name="test1/passes.test">
+  <testcase
+   id="passes 1"
+   name="answer"
+  />
+  <testcase
+   id="passes 2"
+   name="command array"
+  />
+  <testcase
+   id="passes 3"
+   name="command string"
+  />
+  <testcase
+   id="passes 4"
+   name="input string"
+  />
+  <testcase
+   id="passes 5"
+   name="normalize spaces (fail)"
+  />
+  <testcase
+   id="passes 6"
+   name="normalize spaces"
+  />
+  <testcase
+   id="passes 7"
+   name="normalize newlines"
+  />
+  <testcase
+   id="passes 8"
+   name="normalize space and newlines"
+  />
+  <testcase
+   id="passes 9"
+   name="remove whitespace lines"
+  />
+  <testcase
+   id="passes 10"
+   name="abnormal exit status"
+  />
+  <testcase
+   id="passes 11"
+   name="abnormal exit status as array"
+  />
+  <testcase
+   id="passes 12"
+   name="ignored exit status"
+  />
+  <testcase
+   id="passes 13"
+   name="exit on signal"
+  />
+  <testcase
+   id="passes 14"
+   name="abnormal exit status with filter"
+  />
+  <testcase
+   id="passes 15"
+   name="exit on signal with filter"
+  />
+  <testcase
+   id="passes 16"
+   name="filter and &lt;xml&amp;hostile&gt; &quot;description&quot;"
+  />
+  <testcase
+   id="passes 17"
+   name="output regexp"
+  />
+ </testsuite>
+</testsuites>

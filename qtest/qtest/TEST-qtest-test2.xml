@@ -14,8 +14,8 @@ qwer-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 asdf-- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/expected	2018-10-13 13:45:26.395031383 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.395031383 -0400
+--- /tmp/testtemp.11558/expected	2018-10-13 13:55:01.022757013 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.022757013 -0400
 @@ -1 +1 @@
 -qwer
 \ No newline at end of file
@@ -68,8 +68,8 @@ stracktrace:
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1398.
-	TestDriver::analyze_thread_data(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 1", "mt.out", "/tmp/testtemp.10547/actual", ARRAY(0x558bc7302fb0), ARRAY(0x558bc73ef690)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 1", HASH(0x558bc7302ed8), HASH(0x558bc73f9c00)) called at failures.test line 38
+	TestDriver::analyze_thread_data(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 1", "mt.out", "/tmp/testtemp.11558/actual", ARRAY(0x55eb052ba360), ARRAY(0x55eb053f1770)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 1", HASH(0x55eb052e6b90), HASH(0x55eb053f1890)) called at failures.test line 38
 -- BEGIN EXPECTED OUTPUT --
 threads:
   A
@@ -86,12 +86,12 @@ threads:
   C
   D
 sequence groups:
-/tmp/testtemp.10547/actual:4: no input file for thread D; sequence checking abandoned
+/tmp/testtemp.11558/actual:4: no input file for thread D; sequence checking abandoned
 [[D]]:msgD1
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/expected	2018-10-13 13:45:26.407031457 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.403031431 -0400
+--- /tmp/testtemp.11558/expected	2018-10-13 13:55:01.034757088 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.034757088 -0400
 @@ -2,6 +2,7 @@
    A
    B
@@ -100,7 +100,7 @@ sequence groups:
  sequence groups:
 -  b
 -  c
-+/tmp/testtemp.10547/actual:4: no input file for thread D; sequence checking abandoned
++/tmp/testtemp.11558/actual:4: no input file for thread D; sequence checking abandoned
 +[[D]]:msgD1
 -- END DIFFERENCES --
    </failure>
@@ -111,11 +111,11 @@ sequence groups:
   >
    <failure>
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
-expected output in /tmp/testtemp.10547/A.thread-filtered
+expected output in /tmp/testtemp.11558/A.thread-filtered
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1410.
-	TestDriver::analyze_thread_data(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 1", "mt.out", "/tmp/testtemp.10547/actual", ARRAY(0x558bc7302fb0), ARRAY(0x558bc73ef690)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 1", HASH(0x558bc7302ed8), HASH(0x558bc73f9c00)) called at failures.test line 38
+	TestDriver::analyze_thread_data(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 1", "mt.out", "/tmp/testtemp.11558/actual", ARRAY(0x55eb052ba360), ARRAY(0x55eb053f1770)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 1", HASH(0x55eb052e6b90), HASH(0x55eb053f1890)) called at failures.test line 38
 -- BEGIN EXPECTED OUTPUT --
 msgA1
 msgA2
@@ -128,8 +128,8 @@ event1
 msgA3
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/A.thread-filtered	2018-10-13 13:45:26.407031457 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.407031457 -0400
+--- /tmp/testtemp.11558/A.thread-filtered	2018-10-13 13:55:01.034757088 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.034757088 -0400
 @@ -1,4 +1,3 @@
  msgA1
 -msgA2
@@ -152,11 +152,11 @@ msgA3
   >
    <failure>
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
-expected output in /tmp/testtemp.10547/b.seq-expected
+expected output in /tmp/testtemp.11558/b.seq-expected
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1422.
-	TestDriver::analyze_thread_data(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 1", "mt.out", "/tmp/testtemp.10547/actual", ARRAY(0x558bc7302fb0), ARRAY(0x558bc73ef690)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 1", HASH(0x558bc7302ed8), HASH(0x558bc73f9c00)) called at failures.test line 38
+	TestDriver::analyze_thread_data(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 1", "mt.out", "/tmp/testtemp.11558/actual", ARRAY(0x55eb052ba360), ARRAY(0x55eb053f1770)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 1", HASH(0x55eb052e6b90), HASH(0x55eb053f1890)) called at failures.test line 38
 -- BEGIN EXPECTED OUTPUT --
 [[A]]:event1
 [[B]]:event2
@@ -165,8 +165,8 @@ stracktrace:
 [no actual output]
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/b.seq-expected	2018-10-13 13:45:26.403031431 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.415031505 -0400
+--- /tmp/testtemp.11558/b.seq-expected	2018-10-13 13:55:01.030757063 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.042757138 -0400
 @@ -1,2 +1 @@
 -[[A]]:event1
 -[[B]]:event2
@@ -180,11 +180,11 @@ stracktrace:
   >
    <failure>
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
-expected output in /tmp/testtemp.10547/c.seq-expected
+expected output in /tmp/testtemp.11558/c.seq-expected
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1422.
-	TestDriver::analyze_thread_data(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 1", "mt.out", "/tmp/testtemp.10547/actual", ARRAY(0x558bc7302fb0), ARRAY(0x558bc73ef690)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 1", HASH(0x558bc7302ed8), HASH(0x558bc73f9c00)) called at failures.test line 38
+	TestDriver::analyze_thread_data(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 1", "mt.out", "/tmp/testtemp.11558/actual", ARRAY(0x55eb052ba360), ARRAY(0x55eb053f1770)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 1", HASH(0x55eb052e6b90), HASH(0x55eb053f1890)) called at failures.test line 38
 -- BEGIN EXPECTED OUTPUT --
 [[A]]:event1
 [[C]]:event3
@@ -193,8 +193,8 @@ stracktrace:
 [no actual output]
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/c.seq-expected	2018-10-13 13:45:26.403031431 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.415031505 -0400
+--- /tmp/testtemp.11558/c.seq-expected	2018-10-13 13:55:01.030757063 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.042757138 -0400
 @@ -1,2 +1 @@
 -[[A]]:event1
 -[[C]]:event3
@@ -208,10 +208,10 @@ stracktrace:
   >
    <failure>
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
-expected output in /tmp/testtemp.10547/thread-expected
+expected output in /tmp/testtemp.11558/thread-expected
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1190.
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 1", HASH(0x558bc7302ed8), HASH(0x558bc73f9c00)) called at failures.test line 38
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 1", HASH(0x55eb052e6b90), HASH(0x55eb053f1890)) called at failures.test line 38
 -- BEGIN EXPECTED OUTPUT --
 [[A]]:msgA1
 [[C]]:msgC1
@@ -243,8 +243,8 @@ msgB3 line two
 [[A]]:msgA3
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/thread-expected	2018-10-13 13:45:26.403031431 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.419031530 -0400
+--- /tmp/testtemp.11558/thread-expected	2018-10-13 13:55:01.030757063 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.046757163 -0400
 @@ -1,7 +1,7 @@
  [[A]]:msgA1
  [[C]]:msgC1
@@ -269,8 +269,8 @@ msgB3 line two
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1398.
-	TestDriver::analyze_thread_data(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", "mt.out", "/tmp/testtemp.10547/actual", ARRAY(0x558bc73ef6a8), ARRAY(0x558bc73ef7f8)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", HASH(0x558bc7302f38), HASH(0x558bc73fd500)) called at failures.test line 45
+	TestDriver::analyze_thread_data(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", "mt.out", "/tmp/testtemp.11558/actual", ARRAY(0x55eb053e6c08), ARRAY(0x55eb053f17a0)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", HASH(0x55eb052ba348), HASH(0x55eb053f4870)) called at failures.test line 45
 -- BEGIN EXPECTED OUTPUT --
 threads:
   A
@@ -286,20 +286,20 @@ threads:
   B
   C
 sequence groups:
-/tmp/testtemp.10547/actual:2: thread A mismatch; sequencing checking abandoned
+/tmp/testtemp.11558/actual:2: thread A mismatch; sequencing checking abandoned
 actual msgA2x
 expected msgA2
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/expected	2018-10-13 13:45:26.427031578 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.427031578 -0400
+--- /tmp/testtemp.11558/expected	2018-10-13 13:55:01.054757213 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.054757213 -0400
 @@ -3,5 +3,6 @@
    B
    C
  sequence groups:
 -  b
 -  c
-+/tmp/testtemp.10547/actual:2: thread A mismatch; sequencing checking abandoned
++/tmp/testtemp.11558/actual:2: thread A mismatch; sequencing checking abandoned
 +actual msgA2x
 +expected msgA2
 -- END DIFFERENCES --
@@ -311,11 +311,11 @@ expected msgA2
   >
    <failure>
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
-expected output in /tmp/testtemp.10547/A.thread-filtered
+expected output in /tmp/testtemp.11558/A.thread-filtered
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1410.
-	TestDriver::analyze_thread_data(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", "mt.out", "/tmp/testtemp.10547/actual", ARRAY(0x558bc73ef6a8), ARRAY(0x558bc73ef7f8)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", HASH(0x558bc7302f38), HASH(0x558bc73fd500)) called at failures.test line 45
+	TestDriver::analyze_thread_data(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", "mt.out", "/tmp/testtemp.11558/actual", ARRAY(0x55eb053e6c08), ARRAY(0x55eb053f17a0)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", HASH(0x55eb052ba348), HASH(0x55eb053f4870)) called at failures.test line 45
 -- BEGIN EXPECTED OUTPUT --
 msgA1
 msgA2
@@ -329,8 +329,8 @@ event1
 msgA3
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/A.thread-filtered	2018-10-13 13:45:26.427031578 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.427031578 -0400
+--- /tmp/testtemp.11558/A.thread-filtered	2018-10-13 13:55:01.054757213 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.054757213 -0400
 @@ -1,4 +1,4 @@
  msgA1
 -msgA2
@@ -350,11 +350,11 @@ msgA3
   >
    <failure>
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
-expected output in /tmp/testtemp.10547/C.thread-filtered
+expected output in /tmp/testtemp.11558/C.thread-filtered
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1410.
-	TestDriver::analyze_thread_data(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", "mt.out", "/tmp/testtemp.10547/actual", ARRAY(0x558bc73ef6a8), ARRAY(0x558bc73ef7f8)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", HASH(0x558bc7302f38), HASH(0x558bc73fd500)) called at failures.test line 45
+	TestDriver::analyze_thread_data(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", "mt.out", "/tmp/testtemp.11558/actual", ARRAY(0x55eb053e6c08), ARRAY(0x55eb053f17a0)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", HASH(0x55eb052ba348), HASH(0x55eb053f4870)) called at failures.test line 45
 -- BEGIN EXPECTED OUTPUT --
 msgC1
 msgC2
@@ -368,8 +368,8 @@ event3x
 msgC3
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/C.thread-filtered	2018-10-13 13:45:26.431031603 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.435031627 -0400
+--- /tmp/testtemp.11558/C.thread-filtered	2018-10-13 13:55:01.058757238 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.062757263 -0400
 @@ -1,4 +1,4 @@
  msgC1
  msgC2
@@ -385,11 +385,11 @@ msgC3
   >
    <failure>
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
-expected output in /tmp/testtemp.10547/b.seq-expected
+expected output in /tmp/testtemp.11558/b.seq-expected
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1422.
-	TestDriver::analyze_thread_data(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", "mt.out", "/tmp/testtemp.10547/actual", ARRAY(0x558bc73ef6a8), ARRAY(0x558bc73ef7f8)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", HASH(0x558bc7302f38), HASH(0x558bc73fd500)) called at failures.test line 45
+	TestDriver::analyze_thread_data(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", "mt.out", "/tmp/testtemp.11558/actual", ARRAY(0x55eb053e6c08), ARRAY(0x55eb053f17a0)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", HASH(0x55eb052ba348), HASH(0x55eb053f4870)) called at failures.test line 45
 -- BEGIN EXPECTED OUTPUT --
 [[A]]:event1
 [[B]]:event2
@@ -398,8 +398,8 @@ stracktrace:
 [no actual output]
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/b.seq-expected	2018-10-13 13:45:26.423031554 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.435031627 -0400
+--- /tmp/testtemp.11558/b.seq-expected	2018-10-13 13:55:01.050757188 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.062757263 -0400
 @@ -1,2 +1 @@
 -[[A]]:event1
 -[[B]]:event2
@@ -413,11 +413,11 @@ stracktrace:
   >
    <failure>
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
-expected output in /tmp/testtemp.10547/c.seq-expected
+expected output in /tmp/testtemp.11558/c.seq-expected
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1422.
-	TestDriver::analyze_thread_data(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", "mt.out", "/tmp/testtemp.10547/actual", ARRAY(0x558bc73ef6a8), ARRAY(0x558bc73ef7f8)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", HASH(0x558bc7302f38), HASH(0x558bc73fd500)) called at failures.test line 45
+	TestDriver::analyze_thread_data(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", "mt.out", "/tmp/testtemp.11558/actual", ARRAY(0x55eb053e6c08), ARRAY(0x55eb053f17a0)) called at /home/ejb/source/qtest/module/TestDriver.pm line 1176
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", HASH(0x55eb052ba348), HASH(0x55eb053f4870)) called at failures.test line 45
 -- BEGIN EXPECTED OUTPUT --
 [[A]]:event1
 [[C]]:event3
@@ -426,8 +426,8 @@ stracktrace:
 [no actual output]
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/c.seq-expected	2018-10-13 13:45:26.423031554 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.439031651 -0400
+--- /tmp/testtemp.11558/c.seq-expected	2018-10-13 13:55:01.050757188 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.066757288 -0400
 @@ -1,2 +1 @@
 -[[A]]:event1
 -[[C]]:event3
@@ -441,10 +441,10 @@ stracktrace:
   >
    <failure>
 cwd: /home/ejb/source/qtest/test_suite/qtest/test2
-expected output in /tmp/testtemp.10547/thread-expected
+expected output in /tmp/testtemp.11558/thread-expected
 stracktrace:
  at /home/ejb/source/qtest/module/TestDriver.pm line 1190.
-	TestDriver::runtest(TestDriver=HASH(0x558bc6e0e8f8), "multithreaded errors 2", HASH(0x558bc7302f38), HASH(0x558bc73fd500)) called at failures.test line 45
+	TestDriver::runtest(TestDriver=HASH(0x55eb04e048d8), "multithreaded errors 2", HASH(0x55eb052ba348), HASH(0x55eb053f4870)) called at failures.test line 45
 -- BEGIN EXPECTED OUTPUT --
 [[A]]:msgA1
 [[C]]:msgC1
@@ -476,8 +476,8 @@ msgB3 line two
 [[A]]:msgA3
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/thread-expected	2018-10-13 13:45:26.423031554 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.443031675 -0400
+--- /tmp/testtemp.11558/thread-expected	2018-10-13 13:55:01.050757188 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.070757313 -0400
 @@ -1,11 +1,11 @@
  [[A]]:msgA1
  [[C]]:msgC1
@@ -508,8 +508,8 @@ stracktrace:
 -- ACTUAL OUTPUT --
 pi = 22/7-- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.10547/expected	2018-10-13 13:45:26.443031675 -0400
-+++ /tmp/testtemp.10547/actual	2018-10-13 13:45:26.443031675 -0400
+--- /tmp/testtemp.11558/expected	2018-10-13 13:55:01.070757313 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.070757313 -0400
 @@ -1 +1 @@
 -&#xcf;&#x80; = 3.14159...
 \ No newline at end of file
@@ -518,5 +518,72 @@ pi = 22/7-- ACTUAL OUTPUT --
 -- END DIFFERENCES --
    </failure>
   </testcase>
+ </testsuite>
+ <testsuite name="test2/invalid01.test">
+ </testsuite>
+ <testsuite name="test2/invalid02.test">
+ </testsuite>
+ <testsuite name="test2/invalid03.test">
+ </testsuite>
+ <testsuite name="test2/invalid04.test">
+ </testsuite>
+ <testsuite name="test2/invalid05.test">
+ </testsuite>
+ <testsuite name="test2/invalid06.test">
+ </testsuite>
+ <testsuite name="test2/invalid07.test">
+ </testsuite>
+ <testsuite name="test2/invalid08.test">
+ </testsuite>
+ <testsuite name="test2/invalid09.test">
+ </testsuite>
+ <testsuite name="test2/invalid10.test">
+ </testsuite>
+ <testsuite name="test2/invalid11.test">
+ </testsuite>
+ <testsuite name="test2/invalid12.test">
+ </testsuite>
+ <testsuite name="test2/invalid13.test">
+ </testsuite>
+ <testsuite name="test2/invalid14.test">
+ </testsuite>
+ <testsuite name="test2/invalid15.test">
+ </testsuite>
+ <testsuite name="test2/invalid16.test">
+ </testsuite>
+ <testsuite name="test2/invalid17.test">
+  <testcase
+   id="invalid17 1"
+   name="thread data with regexp"
+  />
+ </testsuite>
+ <testsuite name="test2/valid01.test">
+  <testcase
+   id="valid01 1"
+   name="valid failing test case"
+  >
+   <failure>
+cwd: /home/ejb/source/qtest/test_suite/qtest/test2
+stracktrace:
+ at valid01.test line 14.
+-- BEGIN EXPECTED OUTPUT --
+2-- END EXPECTED OUTPUT --
+-- ACTUAL OUTPUT --
+1-- ACTUAL OUTPUT --
+-- DIFF EXPECTED ACTUAL --
+--- /tmp/testtemp.11558/expected	2018-10-13 13:55:01.954762852 -0400
++++ /tmp/testtemp.11558/actual	2018-10-13 13:55:01.954762852 -0400
+@@ -1 +1 @@
+-2
+\ No newline at end of file
++1
+\ No newline at end of file
+-- END DIFFERENCES --
+   </failure>
+  </testcase>
+  <testcase
+   id="valid01 2"
+   name="valid passing test case"
+  />
  </testsuite>
 </testsuites>
