@@ -439,8 +439,8 @@ quack-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.31289/expected	2018-10-13 15:07:30.589805836 -0400
-+++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.589805836 -0400
+--- /tmp/testtemp.10179/expected	2018-10-13 15:47:51.708287350 -0400
++++ /tmp/testtemp.10179/actual	2018-10-13 15:47:51.704287327 -0400
 @@ -1 +0,0 @@
 -quack
 \ No newline at end of file
@@ -472,7 +472,7 @@ qwer
 t&#x94;&#xc2;&#xe7;[0x10]K[0x08]y-- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
 --- test2.out	2018-10-13 15:06:22.457370403 -0400
-+++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.601805913 -0400
++++ /tmp/testtemp.10179/actual	2018-10-13 15:47:51.716287393 -0400
 @@ -1,2 +1 @@
 -t&#x94;&#xc2;&#xe7;[0x10]K[0x08]y
 -qwer
@@ -497,8 +497,8 @@ quack-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.31289/expected	2018-10-13 15:07:30.605805938 -0400
-+++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.601805913 -0400
+--- /tmp/testtemp.10179/expected	2018-10-13 15:47:51.720287415 -0400
++++ /tmp/testtemp.10179/actual	2018-10-13 15:47:51.720287415 -0400
 @@ -1 +0,0 @@
 -quack
 \ No newline at end of file
@@ -520,7 +520,7 @@ stracktrace:
 [0x00][0x00][0x00][0x00][0x00][0x00][0x00][0x00][0x07]:&#xa2;6@&#x85;-- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
 --- test2.in	2011-08-02 09:01:31.000000000 -0400
-+++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.609805964 -0400
++++ /tmp/testtemp.10179/actual	2018-10-13 15:47:51.724287438 -0400
 @@ -1 +1 @@
 -[0x00][0x00][0x00][0x00][0x00][0x00][0x00][0x00]
 \ No newline at end of file
@@ -553,8 +553,8 @@ quack-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.31289/expected	2018-10-13 15:07:30.621806040 -0400
-+++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.617806015 -0400
+--- /tmp/testtemp.10179/expected	2018-10-13 15:47:51.736287503 -0400
++++ /tmp/testtemp.10179/actual	2018-10-13 15:47:51.732287482 -0400
 @@ -1 +0,0 @@
 -quack
 \ No newline at end of file
@@ -589,8 +589,8 @@ quack-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.31289/expected	2018-10-13 15:07:30.633806117 -0400
-+++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.633806117 -0400
+--- /tmp/testtemp.10179/expected	2018-10-13 15:47:51.748287569 -0400
++++ /tmp/testtemp.10179/actual	2018-10-13 15:47:51.748287569 -0400
 @@ -1 +0,0 @@
 -quack
 \ No newline at end of file
@@ -625,8 +625,8 @@ quack-- END EXPECTED OUTPUT --
 -- ACTUAL OUTPUT --
 -- ACTUAL OUTPUT --
 -- DIFF EXPECTED ACTUAL --
---- /tmp/testtemp.31289/expected	2018-10-13 15:07:30.649806219 -0400
-+++ /tmp/testtemp.31289/actual	2018-10-13 15:07:30.645806194 -0400
+--- /tmp/testtemp.10179/expected	2018-10-13 15:47:51.764287658 -0400
++++ /tmp/testtemp.10179/actual	2018-10-13 15:47:51.760287636 -0400
 @@ -1 +0,0 @@
 -quack
 \ No newline at end of file
@@ -749,5 +749,13 @@ quack-- END EXPECTED OUTPUT --
    id="sha2 1"
    name="sha2"
   />
+ </testsuite>
+ <testsuite name="coverage">
+  <testcase name="missing: Pl_PNGFilter decodePaeth 1">
+   <failure message="missing: Pl_PNGFilter decodePaeth 1"/>
+  </testcase>
+  <testcase name="extra: Pl_TIFFPredictor processRow 1">
+   <failure message="extra: Pl_TIFFPredictor processRow 1"/>
+  </testcase>
  </testsuite>
 </testsuites>
