@@ -7,12 +7,15 @@ jobs:
     displayName: 'Linux test'
   - task: PublishTestResults@2
     inputs:
+      testRunTitle: Linux
       buildPlatform: Linux
   - task: PublishTestResults@2
     inputs:
+      testRunTitle: Windows msvc64
       buildPlatform: Windows msvc64
   - task: PublishTestResults@2
     inputs:
+      testRunTitle: Windows msvc32
       buildPlatform: Windows msvc32
 #- job: Windows
 #  pool:
