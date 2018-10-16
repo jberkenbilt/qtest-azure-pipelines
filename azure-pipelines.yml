@@ -1,33 +1,14 @@
 jobs:
-- job: Linux
+- job: Windows
   pool:
-    vmImage: ubuntu-16.04
+    vmImage: vs2017-win2016
+  strategy:
+    matrix:
+      mingw32:
+        wordsize: 32
+      mingw64:
+        wordsize: 64
   steps:
-  - bash: cat -v file.c file.txt
-    displayName: 'Linux test'
-  - task: PublishTestResults@2
-    inputs:
-      testRunTitle: Linux
-      buildPlatform: Linux
-  - task: PublishTestResults@2
-    inputs:
-      testRunTitle: Windows msvc64
-      buildPlatform: Windows msvc64
-  - task: PublishTestResults@2
-    inputs:
-      testRunTitle: Windows msvc32
-      buildPlatform: Windows msvc32
-#- job: Windows
-#  pool:
-#    vmImage: vs2017-win2016
-#  steps:
-#  - bash: |
-#      set -x
-#      git config -l
-#      echo "==="
-#      git config --global core.autocrlf input
-#      echo "==="
-#      git config -l
-#  - checkout: self
-#  - bash: cat -v file.c file.txt
-#    displayName: 'Windows test'
+  - script: |
+    choco install msys2
+    C:\tools\msys64\usr\bin\env.exe MSYSTEM=MINGW64 /bin/bash -l %CD%/build %1
