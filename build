@@ -1,4 +1,5 @@
 #!/bin/bash
+cd $(dirname $0)
 wordsize=$1
 pacman -Sy --noconfirm make base-devel
 if [[ $wordsize == 64 ]]; then
