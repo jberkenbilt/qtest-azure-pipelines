@@ -6,9 +6,11 @@ jobs:
     matrix:
       mingw32:
         wordsize: 32
-      mingw64:
-        wordsize: 64
+#      mingw64:
+#        wordsize: 64
   steps:
   - script: |
-      choco install msys2
-      C:\tools\msys64\usr\bin\env.exe MSYSTEM=MINGW64 /bin/bash -l %CD%/build $(wordsize)
+      curl -L -o potato.tar.gz https://github.com/jberkenbilt/qtest-azure-pipelines/archive/potato.tar.gz
+      tar xvf potato.tar.gz
+      #choco install msys2
+      #C:\tools\msys64\usr\bin\env.exe MSYSTEM=MINGW64 /bin/bash -l %CD%/build $(wordsize)
