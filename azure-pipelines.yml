@@ -1,16 +1,10 @@
 jobs:
-- job: Windows
+- job: Linux32
   pool:
-    vmImage: vs2017-win2016
-  strategy:
-    matrix:
-      mingw32:
-        wordsize: 32
-#      mingw64:
-#        wordsize: 64
-  steps:
-  - script: |
-      curl -L -o potato.tar.gz https://github.com/jberkenbilt/qtest-azure-pipelines/archive/potato.tar.gz
-      tar xvf potato.tar.gz
-      #choco install msys2
-      #C:\tools\msys64\usr\bin\env.exe MSYSTEM=MINGW64 /bin/bash -l %CD%/build $(wordsize)
+    vmImage: ubuntu-16.04
+      sudo dpkg --add-architecture i386
+      sudo apt-get update
+      sudo apt-get -y install \
+         autoconf build-essential zlib1g-dev:i386 libjpeg-dev:i386 \
+         g++-multilib
+      g++ -m32 a.cc -lz
