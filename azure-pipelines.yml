@@ -2,10 +2,12 @@ jobs:
 - job: Linux32
   pool:
     vmImage: ubuntu-16.04
-    script: |
+  steps:
+  - script: |
       sudo dpkg --add-architecture i386
       sudo apt-get update
       sudo apt-get -y install \
          autoconf build-essential zlib1g-dev:i386 libjpeg-dev:i386 \
          g++-multilib
       g++ -m32 a.cc -lz
+
