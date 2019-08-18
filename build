@@ -11,7 +11,4 @@ else
     PATH="/c/tools/msys64/mingw32/bin:$PATH"
 fi
 
-g++ -v
-
-g++ a.cc -o prog.exe
-./prog.exe
+./qtest/bin/qtest-driver -datadir a -bindirs .

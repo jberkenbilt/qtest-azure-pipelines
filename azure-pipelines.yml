@@ -1,13 +1,16 @@
 jobs:
-- job: Linux32
+- job: Windows
   pool:
-    vmImage: ubuntu-16.04
+    vmImage: vs2017-win2016
+  strategy:
+    matrix:
+      mingw32:
+        wordsize: 32
+      mingw64:
+        wordsize: 64
+    maxParallel: 4
   steps:
-  - script: |
-      sudo dpkg --add-architecture i386
-      sudo apt-get update
-      sudo apt-get -y install \
-         autoconf build-essential zlib1g-dev:i386 libjpeg-dev:i386 \
-         g++-multilib
-      g++ -m32 a.cc -lz
-
+  - bash: git config --global core.autocrlf input
+    displayName: 'Disable git autocrlf'
+  - script: ./build.bat $(wordsize)
+    displayName: 'Build'
