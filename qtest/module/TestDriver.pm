@@ -1783,7 +1783,8 @@ sub winrun
     {
 	my $comspec = $ENV{'COMSPEC'};
 	$comspec =~ s,\\,/,g;
-	if ((system("sh -c 'cd /bin; $comspec /c cd'" .
+        print "XXX comspec=\"$comspec\"\n";
+	if ((system("sh -c 'cd /bin; $comspec /c \"echo \%cd\%"'" .
 		    " > $tempfilename") == 0) &&
 	    open(F, "<$tempfilename"))
 	{
