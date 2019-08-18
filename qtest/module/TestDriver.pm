@@ -1779,6 +1779,10 @@ sub winrun
     my ($in_command, $in, $out) = @_;
     my $tempdir = $rep->_tempdir();
     my $tempfilename = "$tempdir/winrun.tmp";
+    if (! defined $winrun)
+    {
+        
+    }
     if (! defined $winbin)
     {
 	my $comspec = $ENV{'COMSPEC'};
@@ -1810,6 +1814,12 @@ sub winrun
         print "XXX end mount\n";
         print "XXX cygpath\n";
         system("cygpath -w /bin");
+        my $xxx = `cygpath -w /bin 2>NUL`;
+        if ($xxx)
+        {
+            $xxx =~ s/[\r\n]+$//s;
+            print "XXX with backquotes: $xxx\n";
+        }
         print "XXX end cygpath\n";
     }
     my $script = "$tempdir/tmpscript";
