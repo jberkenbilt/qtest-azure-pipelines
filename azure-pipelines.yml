@@ -6,8 +6,8 @@ jobs:
     matrix:
       mingw32:
         wordsize: 32
-#      mingw64:
-#        wordsize: 64
+      mingw64:
+        wordsize: 64
     maxParallel: 4
   steps:
   - bash: git config --global core.autocrlf input

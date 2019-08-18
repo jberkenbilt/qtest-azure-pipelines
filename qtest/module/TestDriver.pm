@@ -110,7 +110,6 @@ my $winbin = undef;
 if (($^O eq 'MSWin32') || ($^O eq 'msys'))
 {
     $in_windows = 1;
-    print "XXX in windows\n";
 }
 
 sub get_tty_features
@@ -1781,9 +1780,6 @@ sub winrun
     my $tempfilename = "$tempdir/winrun.tmp";
     if (! defined $winbin)
     {
-	my $comspec = $ENV{'COMSPEC'};
-	$comspec =~ s,\\,/,g;
-        print "XXX comspec=\"$comspec\"\n";
 	if ((system("sh -c 'cd /bin; pwd -W' > $tempfilename") == 0) &&
 	    open(F, "<$tempfilename"))
 	{
@@ -1796,26 +1792,6 @@ sub winrun
 	{
 	    die +__PACKAGE__, ": unable to find windows path to /bin\n";
 	}
-        print "XXX winbin=\"$winbin\"\n";
-        if (opendir(DIR, $winbin))
-        {
-            while (readdir(DIR))
-            {
-                print "XXX   $_\n";
-            }
-        }
-        print "XXX mount\n";
-        system("mount");
-        print "XXX end mount\n";
-        print "XXX cygpath\n";
-        system("cygpath -w /bin");
-        my $xxx = `cygpath -w /bin 2>NUL`;
-        if ($xxx)
-        {
-            $xxx =~ s/[\r\n]+$//s;
-            print "XXX with backquotes: $xxx\n";
-        }
-        print "XXX end cygpath\n";
     }
     my $script = "$tempdir/tmpscript";
     open(F, ">$script") or
@@ -1841,16 +1817,6 @@ sub winrun
 	print F "$in_command\n";
     }
     close(F);
-    print "XXX cmd: " . join('|', @cmd) . "\n";
-    if (open(F, "<$script"))
-    {
-        while (<F>)
-        {
-            print "XXX script: $_";
-        }
-        close(F);
-        print "\nXXX END script\n";
-    }
     my $status = system @cmd;
     if (open(IN, "<$tempfilename") &&
 	open(OUT, ">$out"))
@@ -1859,9 +1825,7 @@ sub winrun
 	binmode OUT;
 	while (<IN>)
 	{
-            print "XXX output line: $_\n";
 	    next if m/^$script:/;
-            print "XXX keeping line: $_\n";
 	    print OUT;
 	}
 	close(IN);
