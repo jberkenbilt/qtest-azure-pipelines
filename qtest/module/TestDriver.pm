@@ -1779,17 +1779,12 @@ sub winrun
     my ($in_command, $in, $out) = @_;
     my $tempdir = $rep->_tempdir();
     my $tempfilename = "$tempdir/winrun.tmp";
-    if (! defined $winrun)
-    {
-        
-    }
     if (! defined $winbin)
     {
 	my $comspec = $ENV{'COMSPEC'};
 	$comspec =~ s,\\,/,g;
         print "XXX comspec=\"$comspec\"\n";
-	if ((system("sh -c 'cd /bin; $comspec /c \"echo \%cd\%\"'" .
-		    " > $tempfilename") == 0) &&
+	if ((system("sh -c 'cd /bin; pwd -W' > $tempfilename") == 0) &&
 	    open(F, "<$tempfilename"))
 	{
 	    $winbin = <F>;
