@@ -2,7 +2,7 @@
 set -ex
 cd $(dirname $0)
 wordsize=$1
-##pacman -Sy --noconfirm make base-devel
+pacman -Sy --noconfirm make base-devel
 ##if [[ $wordsize == 64 ]]; then
 ##    pacman -Sy --noconfirm mingw-w64-x86_64-toolchain
 ##    PATH="/c/tools/msys64/mingw64/bin:$PATH"
