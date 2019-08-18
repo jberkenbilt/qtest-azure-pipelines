@@ -110,6 +110,7 @@ my $winbin = undef;
 if (($^O eq 'MSWin32') || ($^O eq 'msys'))
 {
     $in_windows = 1;
+    print "XXX in windows\n";
 }
 
 sub get_tty_features
@@ -1795,6 +1796,7 @@ sub winrun
 	{
 	    die +__PACKAGE__, ": unable to find windows path to /bin\n";
 	}
+        print "XXX winbin=\"$winbin\"";
     }
     my $script = "$tempdir/tmpscript";
     open(F, ">$script") or
@@ -1820,6 +1822,16 @@ sub winrun
 	print F "$in_command\n";
     }
     close(F);
+    print "XXX cmd: " . join('|', @cmd) . "\n";
+    if (open(F, "<$script"))
+    {
+        while (<F>)
+        {
+            print "XXX script: $_";
+        }
+        close(F);
+        print "\nXXX END script\n";
+    }
     my $status = system @cmd;
     if (open(IN, "<$tempfilename") &&
 	open(OUT, ">$out"))
@@ -1828,7 +1840,9 @@ sub winrun
 	binmode OUT;
 	while (<IN>)
 	{
+            print "XXX output line: $_\n";
 	    next if m/^$script:/;
+            print "XXX keeping line: $_\n";
 	    print OUT;
 	}
 	close(IN);

@@ -12,4 +12,6 @@ pacman -Sy --noconfirm make base-devel
 ##fi
 
 ./qtest/bin/qtest-driver -datadir a -bindirs .
+r=$!
 cat -v qtest.log
+exit $r
