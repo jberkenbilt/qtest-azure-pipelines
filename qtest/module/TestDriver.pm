@@ -1796,7 +1796,20 @@ sub winrun
 	{
 	    die +__PACKAGE__, ": unable to find windows path to /bin\n";
 	}
-        print "XXX winbin=\"$winbin\"";
+        print "XXX winbin=\"$winbin\"\n";
+        if (opendir(DIR, $winbin))
+        {
+            while (readdir(DIR))
+            {
+                print "XXX   $_\n";
+            }
+        }
+        print "XXX mount\n";
+        system("mount");
+        print "XXX end mount\n";
+        print "XXX cygpath\n";
+        system("cygpath -w /bin");
+        print "XXX end cygpath\n";
     }
     my $script = "$tempdir/tmpscript";
     open(F, ">$script") or
