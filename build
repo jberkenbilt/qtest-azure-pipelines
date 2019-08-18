@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -x
 cd $(dirname $0)
 wordsize=$1
 pacman -Sy --noconfirm make base-devel
