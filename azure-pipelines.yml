@@ -14,7 +14,7 @@ jobs:
     displayName: 'Disable git autocrlf'
   - script: ./build.bat $(wordsize)
     displayName: 'Build'
-- job: Windows
+- job: Windows-new
   pool:
     vmImage: windows-2019
   strategy:
