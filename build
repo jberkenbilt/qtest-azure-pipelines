@@ -11,4 +11,6 @@ else
     PATH="/c/tools/msys64/mingw32/bin:$PATH"
 fi
 
+set +e
 ./qtest/bin/qtest-driver -datadir a -bindirs .
+cat -v qtest.log
