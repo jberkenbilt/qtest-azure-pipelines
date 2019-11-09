@@ -1,17 +1,14 @@
 #!/bin/bash
-set -x
+set -ex
 cd $(dirname $0)
 wordsize=$1
 pacman -Sy --noconfirm make base-devel
-##if [[ $wordsize == 64 ]]; then
-##    pacman -Sy --noconfirm mingw-w64-x86_64-toolchain
-##    PATH="/c/tools/msys64/mingw64/bin:$PATH"
-##else
-##    pacman -Sy --noconfirm mingw-w64-i686-toolchain
-##    PATH="/c/tools/msys64/mingw32/bin:$PATH"
-##fi
+if [[ $wordsize == 64 ]]; then
+    pacman -Sy --noconfirm mingw-w64-x86_64-toolchain
+    PATH="/c/tools/msys64/mingw64/bin:$PATH"
+else
+    pacman -Sy --noconfirm mingw-w64-i686-toolchain
+    PATH="/c/tools/msys64/mingw32/bin:$PATH"
+fi
 
 ./qtest/bin/qtest-driver -datadir a -bindirs .
-r=$!
-cat -v qtest.log
-exit $r

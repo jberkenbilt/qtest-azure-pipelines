@@ -1,21 +1,6 @@
 jobs:
 - job: Windows
   pool:
-    vmImage: vs2017-win2016
-  strategy:
-    matrix:
-      mingw32:
-        wordsize: 32
-      mingw64:
-        wordsize: 64
-    maxParallel: 4
-  steps:
-  - bash: git config --global core.autocrlf input
-    displayName: 'Disable git autocrlf'
-  - script: ./build.bat $(wordsize)
-    displayName: 'Build'
-- job: Windows_new
-  pool:
     vmImage: windows-2019
   strategy:
     matrix:
