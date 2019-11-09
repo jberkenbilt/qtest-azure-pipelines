@@ -7,13 +7,16 @@ require TestDriver;
 
 my $td = new TestDriver('test');
 
-$td->runtest("mingw",
-	     {$td->COMMAND => "cmd /c \"mingw\\qpdf --check mi?imal.pdf\""},
-	     {$td->FILE => "minimal-check.out", $td->EXIT_STATUS => 0},
-             $td->NORMALIZE_NEWLINES);
-$td->runtest("msvc",
-	     {$td->COMMAND => "cmd /c \"msvc\\qpdf --check mi?imal.pdf\""},
-	     {$td->FILE => "minimal-check.out", $td->EXIT_STATUS => 0},
-             $td->NORMALIZE_NEWLINES);
+foreach my $i (qw(msvc mingw))
+{
+    unlink "out";
+    system("cmd", "/c", "$i\\\\qpdf --check mi?imal.pdf >out 2>&1");
+
+    $td->runtest($i,
+                 {$td->FILE => "out"},
+                 {$td->FILE => "minimal-check.out"},
+                 $td->NORMALIZE_NEWLINES);
+    unlink "out";
+}
 
 $td->report(2);
