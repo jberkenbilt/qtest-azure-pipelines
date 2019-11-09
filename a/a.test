@@ -7,9 +7,18 @@ require TestDriver;
 
 my $td = new TestDriver('test');
 
-$td->runtest("command",
-	     {$td->COMMAND => "echo potato"},
-	     {$td->STRING => "potato\n", $td->EXIT_STATUS => 0},
-             $td->NORMALIZE_NEWLINES);
+$td->runtest("mingw",
+	     {$td->COMMAND => "mingw/qpdf --static-id --empty --pages ?.pdf -- out.pdf"},
+	     {$td->STRING => "", $td->EXIT_STATUS => 0});
+$td->runtest("check output",
+             {$td->FILE => "out.pdf"},
+             {$td->FILE => "exp.pdf"});
+$td->runtest("msvc",
+	     {$td->COMMAND => "msvc/qpdf --static-id --empty --pages ?.pdf -- out.pdf"},
+	     {$td->STRING => "", $td->EXIT_STATUS => 0});
+$td->runtest("check output",
+             {$td->FILE => "out.pdf"},
+             {$td->FILE => "exp.pdf"});
+
 
 $td->report(1);

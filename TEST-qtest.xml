@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<testsuites>
- <testsuite name="a/a.test">
-  <testcase
-   id="test 1"
-   name="command"
-  />
- </testsuite>
-</testsuites>
