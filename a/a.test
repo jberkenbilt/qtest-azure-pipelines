@@ -8,19 +8,12 @@ require TestDriver;
 my $td = new TestDriver('test');
 
 $td->runtest("mingw",
-	     {$td->COMMAND => "cmd /c \"mingw\\qpdf --static-id --empty --pages ?.pdf -- out.pdf\""},
-	     {$td->STRING => "", $td->EXIT_STATUS => 0});
-$td->runtest("check output",
-             {$td->FILE => "out.pdf"},
-             {$td->FILE => "exp.pdf"});
-unlink "out.pdf";
+	     {$td->COMMAND => "cmd /c \"mingw\\qpdf --check mi?imal.pdf\""},
+	     {$td->FILE => "minimal-check.out", $td->EXIT_STATUS => 0},
+             $td->NORMALIZE_NEWLINES);
 $td->runtest("msvc",
-	     {$td->COMMAND => "cmd /c \"msvc\\qpdf --static-id --empty --pages ?.pdf -- out.pdf\""},
-	     {$td->STRING => "", $td->EXIT_STATUS => 0});
-$td->runtest("check output",
-             {$td->FILE => "out.pdf"},
-             {$td->FILE => "exp.pdf"});
-unlink "out.pdf";
+	     {$td->COMMAND => "cmd /c \"msvc\\qpdf --check mi?imal.pdf\""},
+	     {$td->FILE => "minimal-check.out", $td->EXIT_STATUS => 0},
+             $td->NORMALIZE_NEWLINES);
 
-
-$td->report(1);
+$td->report(2);
