@@ -4,8 +4,8 @@ jobs:
     vmImage: windows-2019
   strategy:
     matrix:
-      mingw32:
-        wordsize: 32
+#      mingw32:
+#        wordsize: 32
       mingw64:
         wordsize: 64
     maxParallel: 4
